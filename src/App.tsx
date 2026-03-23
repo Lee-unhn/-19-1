@@ -1,0 +1,871 @@
+import { useState, useEffect, FormEvent } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
+import { 
+  ArrowRight, 
+  CheckCircle2, 
+  Cpu, 
+  Users, 
+  TrendingUp, 
+  Globe, 
+  Wrench, 
+  Zap, 
+  GraduationCap, 
+  Award,
+  Leaf,
+  Info,
+  Briefcase,
+  DollarSign,
+  Sparkles,
+  ShieldCheck,
+  BarChart3,
+  Lightbulb,
+  Target,
+  Rocket,
+  HelpCircle,
+  Package,
+  AlertCircle,
+  Layers,
+  Coins
+} from 'lucide-react';
+import { cn } from './lib/utils';
+
+// --- Components ---
+
+const Hero = () => (
+  <section id="intro" className="pt-32 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-50 rounded-full -mr-96 -mt-96 blur-[120px] -z-10"></div>
+    <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 text-blue-700 text-[11px] font-black uppercase tracking-[0.2em] mb-8 border border-blue-100 shadow-sm">
+          <Rocket className="w-3.5 h-3.5" />
+          2026 產業轉型領航計畫
+        </div>
+        <h1 className="text-6xl lg:text-8xl font-black text-slate-900 leading-[1.05] mb-6 tracking-tighter">
+          AI 領航 <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-indigo-600 to-blue-800">企業升級</span>
+        </h1>
+        <div className="mb-8 flex items-center gap-3">
+          <div className="h-px w-12 bg-blue-200"></div>
+          <p className="text-2xl font-black text-blue-700 tracking-tight">
+            只需 <span className="text-4xl text-slate-900 underline decoration-blue-500/30 underline-offset-4">1 萬</span>，啟動企業 AI 轉型
+          </p>
+        </div>
+        <p className="text-xl text-slate-500 mb-10 leading-relaxed max-w-lg font-medium">
+          六赫茲專業顧問團隊，對接政府專案資源，協助企業跨越數位與淨零門檻，打造永續競爭力。
+        </p>
+        <div className="flex flex-col sm:flex-row gap-5">
+          <button 
+            onClick={() => document.getElementById('apply')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-blue-700 text-white px-10 py-5 rounded-2xl font-black text-lg hover:bg-blue-800 transition-all shadow-2xl shadow-blue-200 flex items-center justify-center gap-3 group active:scale-95"
+          >
+            立即預約診斷
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </button>
+          <button 
+            onClick={() => document.getElementById('background')?.scrollIntoView({ behavior: 'smooth' })}
+            className="px-10 py-5 rounded-2xl border-2 border-slate-200 bg-white font-black text-lg text-slate-700 hover:bg-slate-50 transition-all active:scale-95"
+          >
+            瞭解計畫細節
+          </button>
+        </div>
+        
+        <div className="mt-12 flex flex-col gap-6">
+          <div className="flex items-center gap-6">
+            <div className="flex -space-x-3">
+              {[1, 2, 3, 4].map((i) => (
+                <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-slate-200 overflow-hidden shadow-sm">
+                  <img src={`https://picsum.photos/seed/user${i}/100/100`} alt="User" referrerPolicy="no-referrer" />
+                </div>
+              ))}
+            </div>
+            <p className="text-sm text-slate-400 font-bold">
+              已有 <span className="text-blue-700">500+</span> 家企業完成初步診斷
+            </p>
+          </div>
+          
+          <div className="flex flex-wrap gap-3">
+            <span className="px-4 py-2 bg-slate-100 text-slate-600 rounded-xl text-xs font-black border border-slate-200 flex items-center gap-2">
+              <Briefcase className="w-3 h-3" /> 零售業首選
+            </span>
+            <span className="px-4 py-2 bg-slate-100 text-slate-600 rounded-xl text-xs font-black border border-slate-200 flex items-center gap-2">
+              <Users className="w-3 h-3" /> 服務業轉型
+            </span>
+            <span className="px-4 py-2 bg-slate-100 text-slate-600 rounded-xl text-xs font-black border border-slate-200 flex items-center gap-2">
+              <Wrench className="w-3 h-3" /> 製造業升級
+            </span>
+          </div>
+        </div>
+      </motion.div>
+      
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="relative"
+      >
+        <div className="min-h-[700px] rounded-[4rem] bg-gradient-to-br from-blue-600 via-indigo-700 to-slate-900 p-2 shadow-3xl overflow-hidden group">
+          <div className="w-full h-full bg-slate-900/40 backdrop-blur-md rounded-[3.8rem] flex flex-col items-center justify-center p-12 text-center relative">
+            <div className="absolute top-10 right-10 opacity-10 group-hover:opacity-20 transition-opacity">
+              <Sparkles className="w-48 h-48 text-blue-400" />
+            </div>
+            
+            <div className="mb-12">
+              <div className="inline-block px-5 py-2 bg-blue-500/20 rounded-full text-blue-300 text-xs font-black uppercase tracking-[0.2em] mb-6 border border-blue-500/30">
+                限時限量 專案補助
+              </div>
+              <h3 className="text-5xl font-black text-white mb-4 tracking-tight">轉型啟動超值方案</h3>
+              <p className="text-blue-200/60 text-base font-medium">政府領航，減輕企業轉型負擔</p>
+            </div>
+
+            <div className="grid grid-cols-1 gap-10 w-full max-w-md">
+              <div className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 backdrop-blur-xl relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-1 bg-blue-500/30"></div>
+                <div className="flex justify-between items-center mb-6">
+                  <span className="text-blue-300 text-xs font-black uppercase tracking-widest">政府補助 19 萬</span>
+                  <span className="text-emerald-400 text-xs font-black uppercase tracking-widest">企業僅需</span>
+                </div>
+                <div className="flex items-baseline justify-center gap-2">
+                  <span className="text-blue-400 text-3xl font-black mr-2">19 +</span>
+                  <span className="text-7xl font-black text-white">1</span>
+                  <span className="text-3xl font-black text-white">萬元</span>
+                </div>
+                <p className="text-xs text-slate-400 mt-6 font-bold tracking-wider">「19+1」方案：極小化轉型成本</p>
+              </div>
+              
+              <div className="flex justify-center relative">
+                <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center shadow-2xl shadow-blue-900/50 z-10 rotate-45 group-hover:rotate-0 transition-transform duration-500">
+                  <ArrowRight className="w-8 h-8 text-white -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
+                </div>
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-blue-500/20 rounded-full blur-xl animate-pulse"></div>
+              </div>
+
+              <div className="bg-gradient-to-br from-blue-500 to-indigo-600 rounded-[2.5rem] p-10 shadow-2xl relative overflow-hidden group/card">
+                <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover/card:translate-x-[100%] transition-transform duration-1500"></div>
+                <span className="block text-blue-100 text-xs font-black uppercase tracking-widest mb-6">方案包含內容</span>
+                
+                <div className="space-y-6 text-left">
+                  <div className="flex items-start gap-4">
+                    <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center shrink-0 mt-0.5">
+                      <CheckCircle2 className="w-4 h-4 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-white text-base font-black">輿情口碑系統 2 個月</p>
+                      <p className="text-blue-100 text-xs font-bold">Asgard AI 驅動，精準掌握市場聲量</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center shrink-0 mt-0.5">
+                      <CheckCircle2 className="w-4 h-4 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-white text-base font-black">專業顧問訪談乙次</p>
+                      <p className="text-blue-100 text-xs font-bold">資深顧問進駐，深度診斷痛點</p>
+                    </div>
+                  </div>
+
+                  <div className="pt-4 border-t border-white/10">
+                    <div className="flex items-start gap-4">
+                      <div className="w-6 h-6 rounded-full bg-emerald-400/30 flex items-center justify-center shrink-0 mt-0.5">
+                        <Sparkles className="w-4 h-4 text-emerald-300" />
+                      </div>
+                      <div>
+                        <p className="text-white text-base font-black">深度工作坊 (三選一)</p>
+                        <p className="text-emerald-200 text-xs font-bold mt-1 leading-relaxed">
+                          消費者訪談 / AI 基礎課 / 會員經營工作坊<br />
+                          (每場 4 小時)
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-12 flex items-center gap-3 text-blue-300/60 text-[11px] font-black uppercase tracking-widest">
+              <ShieldCheck className="w-4 h-4 text-blue-400" />
+              官方認證法人團隊進駐輔導
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  </section>
+);
+
+const ProjectBackground = () => {
+  const challenges = [
+    {
+      icon: <AlertCircle className="w-8 h-8" />,
+      title: "轉型困惑",
+      desc: "不知產業轉型如何做起。",
+      color: "bg-red-50 text-red-600 border-red-100"
+    },
+    {
+      icon: <Layers className="w-8 h-8" />,
+      title: "資源匱乏",
+      desc: "升級產品與技術缺乏相關資源。",
+      color: "bg-orange-50 text-orange-600 border-orange-100"
+    },
+    {
+      icon: <Coins className="w-8 h-8" />,
+      title: "資金壓力",
+      desc: "因應供應鏈、市場調整需要資金支持。",
+      color: "bg-amber-50 text-amber-600 border-amber-100"
+    },
+    {
+      icon: <GraduationCap className="w-8 h-8" />,
+      title: "技能斷層",
+      desc: "勞工缺乏轉型所需的 AI 知識與技能。",
+      color: "bg-rose-50 text-rose-600 border-rose-100"
+    }
+  ];
+
+  return (
+    <section id="background" className="py-32 bg-slate-50 border-y border-slate-100 overflow-hidden relative">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-blue-50/50 rounded-full blur-[120px] -z-10"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-3 gap-16 items-start mb-32">
+          <div className="lg:col-span-1">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider mb-6">
+              <Info className="w-4 h-4" />
+              計畫背景
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-8 leading-tight tracking-tight">
+              因應全球趨勢 <br />
+              帶動產業 <span className="text-blue-700">全面升級</span>
+            </h2>
+            <p className="text-lg text-slate-600 leading-relaxed font-medium">
+              面對全球數位化與淨零轉型的雙重挑戰，本計畫旨在透過政府資源，協助企業跨越轉型門檻，建立永續競爭力。
+            </p>
+          </div>
+          
+          <div className="lg:col-span-2 grid sm:grid-cols-2 gap-8">
+            <div className="bg-white p-12 rounded-[3.5rem] shadow-sm border border-slate-100 hover:shadow-2xl transition-all duration-500 group relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-700"></div>
+              <div className="relative">
+                <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-700 mb-8 group-hover:bg-blue-700 group-hover:text-white transition-all duration-300 shadow-sm">
+                  <TrendingUp className="w-8 h-8" />
+                </div>
+                <h3 className="text-2xl font-black text-slate-900 mb-4">數位轉型領航</h3>
+                <p className="text-slate-500 text-base leading-relaxed font-medium">
+                  協助企業導入 AI 技術、大數據分析與自動化設備，優化生產流程，提升營運效率與產品附加價值。
+                </p>
+              </div>
+            </div>
+            
+            <div className="bg-white p-12 rounded-[3.5rem] shadow-sm border border-slate-100 hover:shadow-2xl transition-all duration-500 group relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-50 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-700"></div>
+              <div className="relative">
+                <div className="w-16 h-16 bg-emerald-50 rounded-2xl flex items-center justify-center text-emerald-700 mb-8 group-hover:bg-emerald-700 group-hover:text-white transition-all duration-300 shadow-sm">
+                  <Leaf className="w-8 h-8" />
+                </div>
+                <h3 className="text-2xl font-black text-slate-900 mb-4">淨零排放路徑</h3>
+                <p className="text-slate-500 text-base leading-relaxed font-medium">
+                  對應國際減碳要求，提供 ESCO 節能診斷、低碳技術導入與碳盤查輔導，助企業達成綠色轉型目標。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-32 border-t border-slate-200 relative">
+          <div className="text-center mb-20">
+            <h3 className="text-4xl font-black text-slate-900 mb-6 tracking-tight">您的企業在轉型路上是否面臨以下挑戰？</h3>
+            <p className="text-lg text-slate-500 font-medium max-w-2xl mx-auto">我們深入產業第一線，了解企業在變革中所遭遇的真實困境。</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {challenges.map((item, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1, duration: 0.6 }}
+                className="group relative"
+              >
+                <div className="absolute inset-0 bg-white rounded-[3rem] shadow-sm border border-slate-100 group-hover:shadow-3xl group-hover:-translate-y-3 transition-all duration-500"></div>
+                <div className="relative p-10 flex flex-col items-center text-center">
+                  <div className={`w-24 h-24 rounded-[2.5rem] flex items-center justify-center mb-10 border-2 ${item.color} group-hover:rotate-12 transition-transform duration-500 shadow-sm`}>
+                    {item.icon}
+                  </div>
+                  <h4 className="text-2xl font-black text-slate-900 mb-5 tracking-tight">{item.title}</h4>
+                  <p className="text-slate-500 text-base leading-relaxed font-medium">{item.desc}</p>
+                  
+                  <div className="mt-10 w-10 h-1.5 bg-slate-100 rounded-full group-hover:w-20 group-hover:bg-blue-500 transition-all duration-500"></div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const WhyChooseUs = () => {
+  const reasons = [
+    {
+      icon: <ShieldCheck className="w-7 h-7" />,
+      title: "官方認證法人團隊",
+      desc: "對接政府專案資源與相關法人單位，確保計畫申請與執行之專業度與合規性。",
+      tag: "權威認證",
+      isFeature: false
+    },
+    {
+      icon: <Lightbulb className="w-7 h-7" />,
+      title: "客製化轉型藍圖",
+      desc: "不提供套版方案，而是根據企業現狀，量身打造最適合的 AI 導入路徑與數位轉型地圖。",
+      tag: "量身打造",
+      isFeature: false
+    },
+    {
+      icon: <Target className="w-7 h-7" />,
+      title: "高額補助對接",
+      desc: "極大化利用政府資源，讓企業以最低成本，換取最高價值的專業輔導與技術導入。",
+      tag: "精準對接",
+      isFeature: false
+    },
+    {
+      icon: <Zap className="w-8 h-8" />,
+      title: "Asgard AI 輿情系統",
+      desc: "獨家對接 Asgard AI 輿情口碑系統，精準掌握市場聲量與消費者真實反饋，為品牌行銷與產品定位提供科學數據依據，讓決策不再憑感覺。",
+      tag: "核心特色",
+      isFeature: true
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: "專業顧問實地訪談",
+      desc: "資深顧問團隊親自進駐廠區，進行深度實地檢測與產業現況調查。我們深入一線了解真實痛點，拒絕僅靠網路資料或遠端會議的紙上談兵。",
+      tag: "實戰導向",
+      isFeature: true
+    }
+  ];
+
+  return (
+    <section className="py-32 bg-white relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl font-black text-slate-900 mb-4 tracking-tight">為什麼選擇六赫茲？</h2>
+          <p className="text-lg text-slate-500 max-w-2xl mx-auto">我們不僅是顧問，更是您企業轉型路上的戰略夥伴。</p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
+          {/* Top 3 standard items */}
+          {reasons.filter(r => !r.isFeature).map((r, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1, duration: 0.6 }}
+              className="md:col-span-2 group relative p-8 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-2xl hover:-translate-y-1 transition-all duration-500"
+            >
+              <div className="absolute top-6 right-6 text-[9px] font-black text-blue-600/30 uppercase tracking-widest group-hover:text-blue-600 transition-colors">
+                {r.tag}
+              </div>
+              <div className="w-14 h-14 bg-white text-blue-700 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-blue-700 group-hover:text-white group-hover:shadow-blue-200 transition-all duration-300">
+                {r.icon}
+              </div>
+              <h3 className="text-xl font-black text-slate-900 mb-3">{r.title}</h3>
+              <p className="text-slate-500 leading-relaxed text-sm font-medium">{r.desc}</p>
+            </motion.div>
+          ))}
+
+          {/* Bottom 2 featured items */}
+          {reasons.filter(r => r.isFeature).map((r, idx) => (
+            <motion.div
+              key={idx + 3}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: (idx + 3) * 0.1, duration: 0.6 }}
+              className="md:col-span-3 group relative p-10 rounded-[3rem] bg-gradient-to-br from-slate-900 to-slate-800 text-white shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden"
+            >
+              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/10 rounded-full -mr-16 -mt-16 blur-2xl group-hover:bg-blue-600/20 transition-colors"></div>
+              <div className="absolute top-8 right-8 text-[10px] font-black text-blue-400 uppercase tracking-[0.2em]">
+                {r.tag}
+              </div>
+              <div className="w-20 h-20 bg-blue-600 text-white rounded-3xl flex items-center justify-center mb-8 shadow-xl shadow-blue-900/40 group-hover:scale-110 transition-transform duration-500">
+                {r.icon}
+              </div>
+              <h3 className="text-3xl font-black mb-6 tracking-tight">{r.title}</h3>
+              <p className="text-slate-300 leading-relaxed text-base font-medium">{r.desc}</p>
+              
+              <a 
+                href="#apply"
+                className="mt-8 inline-flex items-center gap-2 text-blue-400 font-black text-xs uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all hover:text-blue-300"
+              >
+                <span>了解更多細節並申請</span>
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const SuccessStories = () => {
+  const stories = [
+    {
+      company: "某知名電子零組件廠",
+      result: "生產效率提升 35%",
+      desc: "導入 AI 視覺檢測系統，取代人工目檢，大幅降低不良率並節省人力成本。",
+      tag: "數位轉型"
+    },
+    {
+      company: "中部金屬加工大廠",
+      result: "碳排量降低 20%",
+      desc: "透過 ESCO 節能診斷與設備汰換，優化能源管理系統，達成年度減碳目標。",
+      tag: "淨零轉型"
+    },
+    {
+      company: "連鎖餐飲服務集團",
+      result: "營收成長 15%",
+      desc: "建立大數據預測模型，精準掌握客流與食材備料，減少浪費並提升客單價。",
+      tag: "AI 應用"
+    }
+  ];
+
+  return (
+    <section className="py-32 bg-slate-900 text-white overflow-hidden relative">
+      <div className="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-blue-600 rounded-full blur-[150px]"></div>
+      </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+          <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-[10px] font-black uppercase tracking-widest mb-6 border border-blue-500/30">
+              Success Stories
+            </div>
+            <h2 className="text-5xl font-black mb-6 tracking-tight">實戰成效見證</h2>
+            <p className="text-xl text-slate-400">歷年來本補助案已協助超過百家企業完成轉型升級，創造實質商業價值。</p>
+          </div>
+          <div className="flex gap-4">
+            <div className="text-center px-8 py-4 bg-white/5 rounded-3xl border border-white/10 backdrop-blur-sm">
+              <div className="text-3xl font-black text-blue-400">100+</div>
+              <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-1">輔導企業</div>
+            </div>
+            <div className="text-center px-8 py-4 bg-white/5 rounded-3xl border border-white/10 backdrop-blur-sm">
+              <div className="text-3xl font-black text-emerald-400">2.5億</div>
+              <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-1">累計補助金額</div>
+            </div>
+          </div>
+        </div>
+        
+        <div className="grid md:grid-cols-3 gap-8">
+          {stories.map((s, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1 }}
+              className="bg-white/5 p-10 rounded-[3rem] border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all group"
+            >
+              <div className="text-blue-400 text-xs font-black uppercase tracking-widest mb-4">{s.tag}</div>
+              <h3 className="text-xl font-bold mb-2">{s.company}</h3>
+              <div className="text-2xl font-black text-emerald-400 mb-6">{s.result}</div>
+              <p className="text-slate-400 text-sm leading-relaxed">{s.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const Measures = () => {
+  const measures = [
+    { icon: <Cpu className="w-6 h-6" />, title: 'AI 數位轉型', desc: '對接 Asgard AI 輿情系統與資深顧問訪談，精準診斷企業痛點，啟動轉型藍圖。' },
+    { icon: <GraduationCap className="w-6 h-6" />, title: 'AI 人才培育', desc: '提供從決策層到執行層的 AI 職能培訓，建立企業內部技術力。' },
+    { icon: <TrendingUp className="w-6 h-6" />, title: '金融支持', desc: '協助對接優惠融資專案，優化財務結構，確保轉型資金無虞。' },
+    { icon: <Globe className="w-6 h-6" />, title: '市場拓展', desc: '利用大數據分析國際趨勢，協助企業精準定位，開拓海外商機。' },
+    { icon: <Wrench className="w-6 h-6" />, title: '技術輔導', desc: '媒合法人研發資源，解決關鍵技術瓶頸，加速產品研發週期。' },
+    { icon: <Zap className="w-6 h-6" />, title: 'ESCO 節能', desc: '導入能源管理系統與節能設備，降低營運成本，達成減碳目標。' },
+    { icon: <Briefcase className="w-6 h-6" />, title: '勞動力升級', desc: '優化人力資源配置，補助辦訓費用，提升員工產值與留任率。' },
+  ];
+
+  return (
+    <section id="overview" className="py-32 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+          <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-[10px] font-black uppercase tracking-widest mb-6">
+              Core Measures
+            </div>
+            <h2 className="text-5xl font-black text-slate-900 mb-6 tracking-tight">全方位戰略支援</h2>
+            <p className="text-xl text-slate-500">我們提供七大核心扶持措施，確保企業在轉型路徑上的每一步都穩健有力。</p>
+          </div>
+          <div className="hidden md:block">
+            <div className="px-6 py-3 bg-slate-900 text-white rounded-2xl text-sm font-black tracking-widest uppercase shadow-xl">
+              政府領航 · 專業對接
+            </div>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-6">
+          {measures.map((m, idx) => (
+            <motion.div 
+              key={idx} 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.05 }}
+              className="flex flex-col p-8 rounded-[2.5rem] bg-white border border-slate-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group"
+            >
+              <div className="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-400 mb-8 group-hover:bg-blue-700 group-hover:text-white group-hover:shadow-lg group-hover:shadow-blue-200 transition-all duration-300">
+                {m.icon}
+              </div>
+              <h4 className="text-lg font-black text-slate-900 mb-4 group-hover:text-blue-700 transition-colors">{m.title}</h4>
+              <p className="text-sm text-slate-500 leading-relaxed font-medium">{m.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const Talent = () => (
+  <section id="talent" className="py-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="bg-slate-900 rounded-[4rem] p-12 md:p-24 text-white overflow-hidden relative shadow-3xl">
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/20 rounded-full -mr-80 -mt-80 blur-[150px]"></div>
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-600/10 rounded-full -ml-40 -mb-40 blur-[100px]"></div>
+      
+      <div className="relative z-10 grid lg:grid-cols-2 gap-24 items-center">
+        <div>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-[10px] font-black uppercase tracking-widest mb-8 border border-blue-500/30">
+            Talent Development
+          </div>
+          <h2 className="text-6xl font-black mb-8 leading-tight tracking-tighter">AI 人才培育 <br /><span className="text-blue-400">核心競爭力</span></h2>
+          <p className="text-xl text-slate-300 mb-12 leading-relaxed font-medium">
+            強化產業勞工數位轉型知識，建立企業 AI 核心競爭力。
+            每家企業最高可獲得 <span className="text-blue-400 font-black underline underline-offset-8">12 萬元</span> 學費全額補助。
+          </p>
+          <div className="space-y-8">
+            {[
+              { title: '戰略決策層', desc: 'CEO 專班、AI 轉型策略工作坊、數位領導力培訓。', icon: <Target className="w-5 h-5" /> },
+              { title: '技術執行層', desc: 'iPAS 實務班、AI 職能提升班、自動化設備操作。', icon: <Wrench className="w-5 h-5" /> },
+              { title: '基礎保障層', desc: '減班休息勞工參訓津貼、基礎數位工具應用培訓。', icon: <ShieldCheck className="w-5 h-5" /> }
+            ].map((item, idx) => (
+              <div key={idx} className="flex items-start gap-5 group">
+                <div className="mt-1 w-10 h-10 rounded-2xl bg-blue-500/20 flex items-center justify-center border border-blue-500/30 group-hover:bg-blue-500 group-hover:text-white transition-all">
+                  {item.icon}
+                </div>
+                <div>
+                  <h4 className="text-lg font-black text-white mb-2 tracking-wide">{item.title}</h4>
+                  <p className="text-sm text-slate-400 leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        <div className="grid grid-cols-1 gap-8">
+          <div className="bg-white/5 p-12 rounded-[3.5rem] backdrop-blur-xl border border-white/10 relative group overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div className="relative z-10">
+              <div className="text-7xl font-black mb-4 text-blue-400 tracking-tighter">5,000+</div>
+              <div className="text-slate-300 text-xs font-black uppercase tracking-[0.2em]">年度累計培訓人次</div>
+              <div className="mt-6 h-1 w-20 bg-blue-500/30 rounded-full"></div>
+            </div>
+          </div>
+          <div className="bg-white/5 p-12 rounded-[3.5rem] backdrop-blur-xl border border-white/10 relative group overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div className="relative z-10">
+              <div className="text-7xl font-black mb-4 text-white tracking-tighter">92%</div>
+              <div className="text-slate-300 text-xs font-black uppercase tracking-[0.2em]">企業轉型實質成效回饋</div>
+              <div className="mt-6 h-1 w-20 bg-white/20 rounded-full"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+const Support = () => (
+  <section id="support" className="py-24 bg-slate-50">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="text-center mb-20">
+        <h2 className="text-4xl font-black text-slate-900 mb-4 tracking-tight">加值支援服務</h2>
+        <p className="text-lg text-slate-500">除了核心輔導，我們更提供多維度的資源對接</p>
+      </div>
+      <div className="grid md:grid-cols-3 gap-10">
+        {[
+          { icon: <TrendingUp />, title: "財務來相挺", desc: "提供融資診斷與債務協商服務，協助企業爭取營運資金，穩定現金流。" },
+          { icon: <Zap />, title: "勞動力再充電", desc: "補助企業辦理內部訓練費用，個別型最高補助達 95 萬元。" },
+          { icon: <Leaf />, title: "綠色節能升級", desc: "能源流向盤點、設備效率診斷，提供最具成本效益的減碳改善建議。" }
+        ].map((s, idx) => (
+          <div key={idx} className="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300">
+            <div className="w-14 h-14 bg-blue-50 text-blue-700 rounded-2xl flex items-center justify-center mb-8">
+              {s.icon}
+            </div>
+            <h3 className="text-2xl font-bold text-slate-900 mb-4">{s.title}</h3>
+            <p className="text-slate-500 leading-relaxed">{s.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+const Process = () => {
+  const steps = [
+    { title: '線上申請', desc: '填寫企業基本需求，完成初步意願登記。', icon: <Rocket className="w-5 h-5" /> },
+    { title: '資格審核', desc: '由專人確認申請資格，並指派合適顧問團隊。', icon: <ShieldCheck className="w-5 h-5" /> },
+    { title: '實地診斷', desc: '專家團隊進駐廠區，進行深度訪談與路徑規劃。', icon: <Target className="w-5 h-5" /> },
+    { title: '成效追蹤', desc: '產出結案報告，並持續對接後續政府補助資源。', icon: <TrendingUp className="w-5 h-5" /> }
+  ];
+
+  return (
+    <section id="process" className="py-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="text-center mb-24">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-[10px] font-black uppercase tracking-widest mb-6">
+          Standardized Workflow
+        </div>
+        <h2 className="text-5xl font-black text-slate-900 mb-6 tracking-tight">標準化輔導流程</h2>
+        <p className="text-xl text-slate-500 max-w-2xl mx-auto">專業、透明、高效的轉型路徑，確保每一個環節都精準到位。</p>
+      </div>
+      <div className="grid md:grid-cols-4 gap-12 relative">
+        <div className="hidden md:block absolute top-16 left-0 right-0 h-1 bg-slate-100 -z-10"></div>
+        {steps.map((step, idx) => (
+          <motion.div 
+            key={idx} 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: idx * 0.1 }}
+            className="relative group text-center"
+          >
+            <div className="w-32 h-32 rounded-[2.5rem] bg-white border-8 border-slate-50 shadow-xl flex flex-col items-center justify-center mb-10 mx-auto group-hover:bg-blue-700 group-hover:border-blue-50 transition-all duration-500 relative">
+              <span className="absolute -top-4 -left-4 w-10 h-10 bg-slate-900 text-white rounded-2xl flex items-center justify-center text-sm font-black group-hover:bg-emerald-500 transition-colors">
+                0{idx + 1}
+              </span>
+              <div className="text-slate-300 group-hover:text-blue-200 transition-colors mb-2">
+                {step.icon}
+              </div>
+              <span className="text-xs font-black text-slate-400 group-hover:text-white/50 transition-colors uppercase tracking-widest">Step</span>
+            </div>
+            <h3 className="text-2xl font-black text-slate-900 mb-4">{step.title}</h3>
+            <p className="text-sm text-slate-500 leading-relaxed font-medium px-4">{step.desc}</p>
+          </motion.div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+const TrustSignals = () => (
+  <section className="py-12 bg-slate-50 border-y border-slate-100 overflow-hidden">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p className="text-center text-[10px] font-bold text-slate-400 uppercase tracking-[0.3em] mb-8">
+        合作夥伴與技術對接單位
+      </p>
+      <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
+        {['工研院', '資策會', '金屬中心', '中衛發展中心', '生產力中心'].map((name, idx) => (
+          <span key={idx} className="text-xl font-black text-slate-900 tracking-tighter">{name}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+const FloatingCTA = () => (
+  <motion.button
+    initial={{ opacity: 0, scale: 0.8 }}
+    animate={{ opacity: 1, scale: 1 }}
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}
+    onClick={() => document.getElementById('apply')?.scrollIntoView({ behavior: 'smooth' })}
+    className="fixed bottom-8 right-8 z-50 bg-blue-700 text-white p-4 rounded-full shadow-2xl flex items-center gap-2 font-black text-sm group"
+  >
+    <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 whitespace-nowrap">
+      立即預約診斷
+    </span>
+    <Rocket className="w-6 h-6" />
+  </motion.button>
+);
+
+const ApplicationForm = () => {
+  return (
+    <section id="apply" className="py-32 bg-slate-900 relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-indigo-500 rounded-full blur-[100px] translate-x-1/2 translate-y-1/2"></div>
+      </div>
+      
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-[10px] font-bold uppercase tracking-widest mb-6 border border-blue-500/30">
+            Business Diagnostic
+          </div>
+          <div className="flex items-center justify-center gap-2 text-blue-400 mb-6">
+            <Sparkles className="w-5 h-5" />
+            <span className="text-sm font-black tracking-widest uppercase">只需 1 萬，啟動 AI 升級</span>
+          </div>
+          <h2 className="text-5xl font-black text-white mb-6 tracking-tight">啟動您的轉型藍圖</h2>
+          <p className="text-xl text-slate-400 max-w-2xl mx-auto mb-12">
+            點擊下方按鈕前往 Google 表單填寫初步診斷需求。
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 text-left">
+            {[
+              { title: "輿情口碑系統", desc: "Asgard AI 驅動 2 個月", icon: <Zap className="w-5 h-5 text-blue-400" /> },
+              { title: "專業顧問訪談", desc: "資深顧問深度診斷乙次", icon: <Target className="w-5 h-5 text-indigo-400" /> },
+              { title: "深度工作坊", desc: "三選一專業課程 4 小時", icon: <GraduationCap className="w-5 h-5 text-emerald-400" /> }
+            ].map((item, idx) => (
+              <div key={idx} className="bg-white/5 p-8 rounded-3xl border border-white/10 backdrop-blur-sm">
+                <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center mb-4">
+                  {item.icon}
+                </div>
+                <h4 className="text-white font-black mb-2">{item.title}</h4>
+                <p className="text-slate-400 text-sm font-medium">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+          
+          <motion.a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSd4532IofkzPwtXm7Ge0IXaVJGIPjEpK4EKAI4F6bOKpCWSZg/viewform?usp=dialog"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="inline-flex items-center gap-4 bg-white text-slate-900 px-12 py-6 rounded-[2rem] font-black text-2xl shadow-2xl hover:bg-blue-50 transition-all group"
+          >
+            前往填寫申請表單
+            <ArrowRight className="w-8 h-8 group-hover:translate-x-2 transition-transform" />
+          </motion.a>
+          
+          <p className="mt-8 text-slate-500 text-sm font-medium">
+            * 點擊後將開啟新分頁前往官方 Google 表單
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const FAQ = () => {
+  const faqs = [
+    { q: "企業申請本計畫需要具備什麼資格？", a: "凡在台灣合法登記之企業，且無重大違規紀錄者皆可申請。我們將根據企業規模與產業別，媒合最合適的補助專案。" },
+    { q: "「1 萬換 20 萬」的方案包含哪些具體服務？", a: "包含 Asgard AI 輿情口碑系統 2 個月使用權、資深顧問實地訪視診斷乙次，以及可從「消費者訪談」、「AI 基礎課」、「會員經營」中三選一的 4 小時深度工作坊。" },
+    { q: "計畫執行週期通常需要多久？", a: "初步診斷通常在 2-4 週內完成。後續的深度輔導與技術導入則視企業需求而定，通常為 3-6 個月。" },
+    { q: "除了 AI 轉型，淨零排放相關的補助也可以申請嗎？", a: "是的，本計畫採「雙軸轉型」策略，數位與淨零資源可同步對接，協助企業達成 ESG 永續目標。" }
+  ];
+
+  const [openIdx, setOpenIdx] = useState<number | null>(null);
+
+  return (
+    <section className="py-32 bg-slate-50">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-[10px] font-black uppercase tracking-widest mb-6">
+            Common Questions
+          </div>
+          <h2 className="text-5xl font-black text-slate-900 mb-6 tracking-tight">常見問題解答</h2>
+          <p className="text-xl text-slate-500">解決您的疑慮，加速轉型決策過程。</p>
+        </div>
+        <div className="space-y-4">
+          {faqs.map((faq, idx) => (
+            <div key={idx} className="bg-white rounded-[2rem] border border-slate-100 overflow-hidden shadow-sm">
+              <button 
+                onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
+                className="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-slate-50 transition-colors"
+              >
+                <span className="font-black text-slate-900">{faq.q}</span>
+                <div className={cn("w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center transition-transform", openIdx === idx && "rotate-180 bg-blue-700 text-white")}>
+                  <Zap className="w-4 h-4" />
+                </div>
+              </button>
+              <AnimatePresence>
+                {openIdx === idx && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="px-8 pb-8 text-slate-500 text-sm leading-relaxed font-medium">
+                      {faq.a}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const Footer = () => (
+  <footer className="py-24 bg-white border-t border-slate-100">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="grid md:grid-cols-4 gap-16 mb-20">
+        <div className="md:col-span-2">
+          <div className="flex flex-col mb-8">
+            <span className="text-sm font-black text-blue-700 uppercase tracking-[0.3em] mb-1">推動產業升級</span>
+            <span className="text-sm font-black text-blue-700 uppercase tracking-[0.3em]">強化企業競爭力</span>
+          </div>
+          <p className="text-slate-500 text-lg leading-relaxed max-w-md font-medium">
+            六赫茲 (The Hex) 致力於成為企業轉型路上的最強後盾，對接政府資源，共創產業新價值。我們以專業診斷為起點，陪伴企業邁向 AI 與淨零的永續未來。
+          </p>
+        </div>
+        
+        <div>
+          <h4 className="font-black text-slate-900 uppercase tracking-[0.2em] text-xs mb-8">計畫專區</h4>
+          <ul className="space-y-4 text-sm text-slate-500 font-bold">
+            <li><button onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})} className="hover:text-blue-700 transition-colors">計畫簡介</button></li>
+            <li><button onClick={() => document.getElementById('overview')?.scrollIntoView({behavior: 'smooth'})} className="hover:text-blue-700 transition-colors">策略總覽</button></li>
+            <li><button onClick={() => document.getElementById('talent')?.scrollIntoView({behavior: 'smooth'})} className="hover:text-blue-700 transition-colors">人才培育</button></li>
+            <li><button onClick={() => document.getElementById('process')?.scrollIntoView({behavior: 'smooth'})} className="hover:text-blue-700 transition-colors">輔導流程</button></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div className="pt-12 border-t border-slate-50 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div className="flex items-center gap-6">
+          <p className="text-slate-400 text-[10px] font-black uppercase tracking-[0.3em]">
+            © 2026 六赫茲 (The Hex) 產業競爭力輔導團. All rights reserved.
+          </p>
+        </div>
+        <div className="flex gap-8 text-[10px] font-black text-slate-300 uppercase tracking-[0.3em]">
+          <button className="hover:text-blue-700 transition-colors">隱私權政策</button>
+          <button className="hover:text-blue-700 transition-colors">服務條款</button>
+          <button className="hover:text-blue-700 transition-colors">資訊安全</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+);
+
+export default function App() {
+  return (
+    <div className="min-h-screen font-sans selection:bg-blue-100 selection:text-blue-900">
+      <Hero />
+      <WhyChooseUs />
+      <ProjectBackground />
+      <Measures />
+      <SuccessStories />
+      <Talent />
+      <Support />
+      <Process />
+      <FAQ />
+      <ApplicationForm />
+      <Footer />
+      <FloatingCTA />
+    </div>
+  );
+}
