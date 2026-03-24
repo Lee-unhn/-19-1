@@ -45,14 +45,14 @@ const Hero = () => (
           <Rocket className="w-3.5 h-3.5" />
           2026 產業轉型領航計畫
         </div>
-        <h1 className="text-6xl lg:text-8xl font-black text-slate-900 leading-[1.05] mb-6 tracking-tighter">
+        <h1 className="text-4xl sm:text-6xl lg:text-8xl font-black text-slate-900 leading-[1.05] mb-6 tracking-tighter">
           AI 領航 <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-indigo-600 to-blue-800">企業升級</span>
         </h1>
         <div className="mb-8 flex items-center gap-3">
           <div className="h-px w-12 bg-blue-200"></div>
-          <p className="text-2xl font-black text-blue-700 tracking-tight">
-            只需 <span className="text-4xl text-slate-900 underline decoration-blue-500/30 underline-offset-4">1 萬</span>，啟動企業 AI 轉型
+          <p className="text-xl sm:text-2xl font-black text-blue-700 tracking-tight">
+            只需 <span className="text-3xl sm:text-4xl text-slate-900 underline decoration-blue-500/30 underline-offset-4">1 萬</span>，啟動企業 AI 轉型
           </p>
         </div>
         <p className="text-xl text-slate-500 mb-10 leading-relaxed max-w-lg font-medium">
@@ -107,47 +107,47 @@ const Hero = () => (
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="relative"
+        className="relative w-full overflow-hidden lg:overflow-visible"
       >
-        <div className="min-h-[700px] rounded-[4rem] bg-gradient-to-br from-blue-600 via-indigo-700 to-slate-900 p-2 shadow-3xl overflow-hidden group">
-          <div className="w-full h-full bg-slate-900/40 backdrop-blur-md rounded-[3.8rem] flex flex-col items-center justify-center p-12 text-center relative">
+        <div className="min-h-[500px] lg:min-h-[700px] rounded-[2.5rem] lg:rounded-[4rem] bg-gradient-to-br from-blue-600 via-indigo-700 to-slate-900 p-1.5 sm:p-2 shadow-3xl overflow-hidden group">
+          <div className="w-full h-full bg-slate-900/40 backdrop-blur-md rounded-[2.4rem] lg:rounded-[3.8rem] flex flex-col items-center justify-center p-6 sm:p-12 text-center relative">
             <div className="absolute top-10 right-10 opacity-10 group-hover:opacity-20 transition-opacity">
-              <Sparkles className="w-48 h-48 text-blue-400" />
+              <Sparkles className="w-24 h-24 sm:w-48 h-48 text-blue-400" />
             </div>
             
-            <div className="mb-12">
-              <div className="inline-block px-5 py-2 bg-blue-500/20 rounded-full text-blue-300 text-xs font-black uppercase tracking-[0.2em] mb-6 border border-blue-500/30">
+            <div className="mb-8 lg:mb-12">
+              <div className="inline-block px-4 py-1.5 sm:px-5 sm:py-2 bg-blue-500/20 rounded-full text-blue-300 text-[10px] sm:text-xs font-black uppercase tracking-[0.2em] mb-4 sm:mb-6 border border-blue-500/30">
                 限時限量 專案補助
               </div>
-              <h3 className="text-5xl font-black text-white mb-4 tracking-tight">轉型啟動超值方案</h3>
-              <p className="text-blue-200/60 text-base font-medium">政府領航，減輕企業轉型負擔</p>
+              <h3 className="text-3xl sm:text-5xl font-black text-white mb-4 tracking-tight">轉型啟動超值方案</h3>
+              <p className="text-blue-200/60 text-sm sm:text-base font-medium">政府領航，減輕企業轉型負擔</p>
             </div>
 
-            <div className="grid grid-cols-1 gap-10 w-full max-w-md">
-              <div className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 backdrop-blur-xl relative overflow-hidden">
+            <div className="grid grid-cols-1 gap-6 sm:gap-10 w-full max-w-md">
+              <div className="bg-white/5 border border-white/10 rounded-[1.5rem] lg:rounded-[2.5rem] p-6 sm:p-10 backdrop-blur-xl relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-1 bg-blue-500/30"></div>
-                <div className="flex justify-between items-center mb-6">
-                  <span className="text-blue-300 text-xs font-black uppercase tracking-widest">政府補助 19 萬</span>
-                  <span className="text-emerald-400 text-xs font-black uppercase tracking-widest">企業僅需</span>
+                <div className="flex justify-between items-center mb-4 sm:mb-6">
+                  <span className="text-blue-300 text-[10px] sm:text-xs font-black uppercase tracking-widest">政府補助 19 萬</span>
+                  <span className="text-emerald-400 text-[10px] sm:text-xs font-black uppercase tracking-widest">企業僅需</span>
                 </div>
-                <div className="flex items-baseline justify-center gap-2">
-                  <span className="text-blue-400 text-3xl font-black mr-2">19 +</span>
-                  <span className="text-7xl font-black text-white">1</span>
-                  <span className="text-3xl font-black text-white">萬元</span>
+                <div className="flex items-baseline justify-center gap-1 sm:gap-2">
+                  <span className="text-blue-400 text-xl sm:text-3xl font-black mr-1 sm:mr-2">19 +</span>
+                  <span className="text-5xl sm:text-7xl font-black text-white">1</span>
+                  <span className="text-xl sm:text-3xl font-black text-white">萬元</span>
                 </div>
-                <p className="text-xs text-slate-400 mt-6 font-bold tracking-wider">「19+1」方案：極小化轉型成本</p>
+                <p className="text-[10px] sm:text-xs text-slate-400 mt-4 sm:mt-6 font-bold tracking-wider">「19+1」方案：極小化轉型成本</p>
               </div>
               
               <div className="flex justify-center relative">
-                <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center shadow-2xl shadow-blue-900/50 z-10 rotate-45 group-hover:rotate-0 transition-transform duration-500">
-                  <ArrowRight className="w-8 h-8 text-white -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-blue-600 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-2xl shadow-blue-900/50 z-10 rotate-45 group-hover:rotate-0 transition-transform duration-500">
+                  <ArrowRight className="w-6 h-6 sm:w-8 sm:h-8 text-white -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
                 </div>
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-blue-500/20 rounded-full blur-xl animate-pulse"></div>
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 sm:w-24 sm:h-24 bg-blue-50/20 rounded-full blur-xl animate-pulse"></div>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-500 to-indigo-600 rounded-[2.5rem] p-10 shadow-2xl relative overflow-hidden group/card">
+              <div className="bg-gradient-to-br from-blue-500 to-indigo-600 rounded-[1.5rem] lg:rounded-[2.5rem] p-6 sm:p-10 shadow-2xl relative overflow-hidden group/card">
                 <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover/card:translate-x-[100%] transition-transform duration-1500"></div>
-                <span className="block text-blue-100 text-xs font-black uppercase tracking-widest mb-6">方案包含內容</span>
+                <span className="block text-blue-100 text-[10px] sm:text-xs font-black uppercase tracking-widest mb-4 sm:mb-6">方案包含內容</span>
                 
                 <div className="space-y-6 text-left">
                   <div className="flex items-start gap-4">
@@ -238,7 +238,7 @@ const ProjectBackground = () => {
               <Info className="w-4 h-4" />
               計畫背景
             </div>
-            <h2 className="text-4xl lg:text-5xl font-black text-slate-900 mb-8 leading-tight tracking-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 mb-8 leading-tight tracking-tight">
               因應全球趨勢 <br />
               帶動產業 <span className="text-blue-700">全面升級</span>
             </h2>
@@ -448,16 +448,16 @@ const SuccessStories = () => {
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-[10px] font-black uppercase tracking-widest mb-6 border border-blue-500/30">
               Success Stories
             </div>
-            <h2 className="text-5xl font-black mb-6 tracking-tight">實戰成效見證</h2>
-            <p className="text-xl text-slate-400">歷年來本補助案已協助超過百家企業完成轉型升級，創造實質商業價值。</p>
+            <h2 className="text-3xl sm:text-5xl font-black mb-6 tracking-tight">實戰成效見證</h2>
+            <p className="text-lg sm:text-xl text-slate-400">歷年來本補助案已協助超過百家企業完成轉型升級，創造實質商業價值。</p>
           </div>
-          <div className="flex gap-4">
-            <div className="text-center px-8 py-4 bg-white/5 rounded-3xl border border-white/10 backdrop-blur-sm">
-              <div className="text-3xl font-black text-blue-400">100+</div>
+          <div className="grid grid-cols-2 sm:flex gap-4 w-full sm:w-auto">
+            <div className="text-center px-4 sm:px-8 py-4 bg-white/5 rounded-3xl border border-white/10 backdrop-blur-sm">
+              <div className="text-2xl sm:text-3xl font-black text-blue-400">100+</div>
               <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-1">輔導企業</div>
             </div>
-            <div className="text-center px-8 py-4 bg-white/5 rounded-3xl border border-white/10 backdrop-blur-sm">
-              <div className="text-3xl font-black text-emerald-400">2.5億</div>
+            <div className="text-center px-4 sm:px-8 py-4 bg-white/5 rounded-3xl border border-white/10 backdrop-blur-sm">
+              <div className="text-2xl sm:text-3xl font-black text-emerald-400">2.5億</div>
               <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-1">累計補助金額</div>
             </div>
           </div>
@@ -504,7 +504,7 @@ const Measures = () => {
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-[10px] font-black uppercase tracking-widest mb-6">
               Core Measures
             </div>
-            <h2 className="text-5xl font-black text-slate-900 mb-6 tracking-tight">全方位戰略支援</h2>
+            <h2 className="text-3xl sm:text-5xl font-black text-slate-900 mb-6 tracking-tight">全方位戰略支援</h2>
             <p className="text-xl text-slate-500">我們提供七大核心扶持措施，確保企業在轉型路徑上的每一步都穩健有力。</p>
           </div>
           <div className="hidden md:block">
@@ -537,55 +537,55 @@ const Measures = () => {
 };
 
 const Talent = () => (
-  <section id="talent" className="py-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="bg-slate-900 rounded-[4rem] p-12 md:p-24 text-white overflow-hidden relative shadow-3xl">
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/20 rounded-full -mr-80 -mt-80 blur-[150px]"></div>
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-600/10 rounded-full -ml-40 -mb-40 blur-[100px]"></div>
+  <section id="talent" className="py-20 sm:py-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="bg-slate-900 rounded-[2.5rem] lg:rounded-[4rem] p-8 sm:p-12 md:p-24 text-white overflow-hidden relative shadow-3xl">
+      <div className="absolute top-0 right-0 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-blue-600/20 rounded-full -mr-40 sm:-mr-80 -mt-40 sm:-mt-80 blur-[100px] sm:blur-[150px]"></div>
+      <div className="absolute bottom-0 left-0 w-[200px] sm:w-[400px] h-[200px] sm:h-[400px] bg-indigo-600/10 rounded-full -ml-20 sm:-ml-40 -mb-20 sm:-mb-40 blur-[80px] sm:blur-[100px]"></div>
       
-      <div className="relative z-10 grid lg:grid-cols-2 gap-24 items-center">
+      <div className="relative z-10 grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-[10px] font-black uppercase tracking-widest mb-8 border border-blue-500/30">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-[10px] font-black uppercase tracking-widest mb-6 sm:mb-8 border border-blue-500/30">
             Talent Development
           </div>
-          <h2 className="text-6xl font-black mb-8 leading-tight tracking-tighter">AI 人才培育 <br /><span className="text-blue-400">核心競爭力</span></h2>
-          <p className="text-xl text-slate-300 mb-12 leading-relaxed font-medium">
+          <h2 className="text-4xl sm:text-6xl font-black mb-6 sm:mb-8 leading-tight tracking-tighter">AI 人才培育 <br /><span className="text-blue-400">核心競爭力</span></h2>
+          <p className="text-lg sm:text-xl text-slate-300 mb-8 sm:mb-12 leading-relaxed font-medium">
             強化產業勞工數位轉型知識，建立企業 AI 核心競爭力。
             每家企業最高可獲得 <span className="text-blue-400 font-black underline underline-offset-8">12 萬元</span> 學費全額補助。
           </p>
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             {[
               { title: '戰略決策層', desc: 'CEO 專班、AI 轉型策略工作坊、數位領導力培訓。', icon: <Target className="w-5 h-5" /> },
               { title: '技術執行層', desc: 'iPAS 實務班、AI 職能提升班、自動化設備操作。', icon: <Wrench className="w-5 h-5" /> },
               { title: '基礎保障層', desc: '減班休息勞工參訓津貼、基礎數位工具應用培訓。', icon: <ShieldCheck className="w-5 h-5" /> }
             ].map((item, idx) => (
-              <div key={idx} className="flex items-start gap-5 group">
-                <div className="mt-1 w-10 h-10 rounded-2xl bg-blue-500/20 flex items-center justify-center border border-blue-500/30 group-hover:bg-blue-500 group-hover:text-white transition-all">
+              <div key={idx} className="flex items-start gap-4 sm:gap-5 group">
+                <div className="mt-1 w-10 h-10 rounded-2xl bg-blue-500/20 flex items-center justify-center border border-blue-500/30 group-hover:bg-blue-500 group-hover:text-white transition-all shrink-0">
                   {item.icon}
                 </div>
                 <div>
-                  <h4 className="text-lg font-black text-white mb-2 tracking-wide">{item.title}</h4>
-                  <p className="text-sm text-slate-400 leading-relaxed">{item.desc}</p>
+                  <h4 className="text-base sm:text-lg font-black text-white mb-1 sm:mb-2 tracking-wide">{item.title}</h4>
+                  <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">{item.desc}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
         
-        <div className="grid grid-cols-1 gap-8">
-          <div className="bg-white/5 p-12 rounded-[3.5rem] backdrop-blur-xl border border-white/10 relative group overflow-hidden">
+        <div className="grid grid-cols-1 gap-6 sm:gap-8">
+          <div className="bg-white/5 p-8 sm:p-12 rounded-[2rem] lg:rounded-[3.5rem] backdrop-blur-xl border border-white/10 relative group overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <div className="relative z-10">
-              <div className="text-7xl font-black mb-4 text-blue-400 tracking-tighter">5,000+</div>
-              <div className="text-slate-300 text-xs font-black uppercase tracking-[0.2em]">年度累計培訓人次</div>
-              <div className="mt-6 h-1 w-20 bg-blue-500/30 rounded-full"></div>
+              <div className="text-5xl sm:text-7xl font-black mb-2 sm:mb-4 text-blue-400 tracking-tighter">5,000+</div>
+              <div className="text-slate-300 text-[10px] sm:text-xs font-black uppercase tracking-[0.2em]">年度累計培訓人次</div>
+              <div className="mt-4 sm:mt-6 h-1 w-16 sm:w-20 bg-blue-500/30 rounded-full"></div>
             </div>
           </div>
-          <div className="bg-white/5 p-12 rounded-[3.5rem] backdrop-blur-xl border border-white/10 relative group overflow-hidden">
+          <div className="bg-white/5 p-8 sm:p-12 rounded-[2rem] lg:rounded-[3.5rem] backdrop-blur-xl border border-white/10 relative group overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <div className="relative z-10">
-              <div className="text-7xl font-black mb-4 text-white tracking-tighter">92%</div>
-              <div className="text-slate-300 text-xs font-black uppercase tracking-[0.2em]">企業轉型實質成效回饋</div>
-              <div className="mt-6 h-1 w-20 bg-white/20 rounded-full"></div>
+              <div className="text-5xl sm:text-7xl font-black mb-2 sm:mb-4 text-white tracking-tighter">92%</div>
+              <div className="text-slate-300 text-[10px] sm:text-xs font-black uppercase tracking-[0.2em]">企業轉型實質成效回饋</div>
+              <div className="mt-4 sm:mt-6 h-1 w-16 sm:w-20 bg-white/20 rounded-full"></div>
             </div>
           </div>
         </div>
@@ -714,8 +714,8 @@ const ApplicationForm = () => {
             <Sparkles className="w-5 h-5" />
             <span className="text-sm font-black tracking-widest uppercase">只需 1 萬，啟動 AI 升級</span>
           </div>
-          <h2 className="text-5xl font-black text-white mb-6 tracking-tight">啟動您的轉型藍圖</h2>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto mb-12">
+          <h2 className="text-3xl sm:text-5xl font-black text-white mb-6 tracking-tight">啟動您的轉型藍圖</h2>
+          <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-12">
             點擊下方按鈕前往 Google 表單填寫初步診斷需求。
           </p>
           
@@ -725,7 +725,7 @@ const ApplicationForm = () => {
               { title: "專業顧問訪談", desc: "資深顧問深度診斷乙次", icon: <Target className="w-5 h-5 text-indigo-400" /> },
               { title: "深度工作坊", desc: "三選一專業課程 4 小時", icon: <GraduationCap className="w-5 h-5 text-emerald-400" /> }
             ].map((item, idx) => (
-              <div key={idx} className="bg-white/5 p-8 rounded-3xl border border-white/10 backdrop-blur-sm">
+              <div key={idx} className="bg-white/5 p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-white/10 backdrop-blur-sm">
                 <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center mb-4">
                   {item.icon}
                 </div>
@@ -741,10 +741,10 @@ const ApplicationForm = () => {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-4 bg-white text-slate-900 px-12 py-6 rounded-[2rem] font-black text-2xl shadow-2xl hover:bg-blue-50 transition-all group"
+            className="inline-flex items-center gap-4 bg-white text-slate-900 px-8 sm:px-12 py-4 sm:py-6 rounded-2xl sm:rounded-[2rem] font-black text-lg sm:text-2xl shadow-2xl hover:bg-blue-50 transition-all group"
           >
             前往填寫申請表單
-            <ArrowRight className="w-8 h-8 group-hover:translate-x-2 transition-transform" />
+            <ArrowRight className="w-6 h-6 sm:w-8 sm:h-8 group-hover:translate-x-2 transition-transform" />
           </motion.a>
           
           <p className="mt-8 text-slate-500 text-sm font-medium">
@@ -773,19 +773,19 @@ const FAQ = () => {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-[10px] font-black uppercase tracking-widest mb-6">
             Common Questions
           </div>
-          <h2 className="text-5xl font-black text-slate-900 mb-6 tracking-tight">常見問題解答</h2>
-          <p className="text-xl text-slate-500">解決您的疑慮，加速轉型決策過程。</p>
+          <h2 className="text-3xl sm:text-5xl font-black text-slate-900 mb-6 tracking-tight">常見問題解答</h2>
+          <p className="text-lg sm:text-xl text-slate-500">解決您的疑慮，加速轉型決策過程。</p>
         </div>
         <div className="space-y-4">
           {faqs.map((faq, idx) => (
-            <div key={idx} className="bg-white rounded-[2rem] border border-slate-100 overflow-hidden shadow-sm">
+            <div key={idx} className="bg-white rounded-2xl sm:rounded-[2rem] border border-slate-100 overflow-hidden shadow-sm">
               <button 
                 onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
-                className="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-slate-50 transition-colors"
+                className="w-full px-6 sm:px-8 py-4 sm:py-6 text-left flex justify-between items-center hover:bg-slate-50 transition-colors"
               >
-                <span className="font-black text-slate-900">{faq.q}</span>
-                <div className={cn("w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center transition-transform", openIdx === idx && "rotate-180 bg-blue-700 text-white")}>
-                  <Zap className="w-4 h-4" />
+                <span className="font-black text-slate-900 text-sm sm:text-base">{faq.q}</span>
+                <div className={cn("w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-slate-100 flex items-center justify-center transition-transform shrink-0 ml-4", openIdx === idx && "rotate-180 bg-blue-700 text-white")}>
+                  <Zap className="w-3 h-3 sm:w-4 sm:h-4" />
                 </div>
               </button>
               <AnimatePresence>
