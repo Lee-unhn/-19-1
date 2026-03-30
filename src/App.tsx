@@ -43,7 +43,7 @@ const Hero = () => (
       >
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 text-blue-700 text-[11px] font-black uppercase tracking-[0.2em] mb-8 border border-blue-100 shadow-sm">
           <Rocket className="w-3.5 h-3.5" />
-          2026 企業陪跑服務計劃
+          六赫茲 2026 企業陪跑服務計劃
         </div>
         <h1 className="text-4xl sm:text-6xl lg:text-8xl font-black text-slate-900 leading-[1.05] mb-6 tracking-tighter">
           企業陪跑 <br />
@@ -120,7 +120,7 @@ const Hero = () => (
                 限時限量 專案補助
               </div>
               <h3 className="text-3xl sm:text-5xl font-black text-white mb-4 tracking-tight">轉型啟動超值方案</h3>
-              <p className="text-blue-200/60 text-sm sm:text-base font-black">政府領航，減輕企業轉型負擔</p>
+              <p className="text-blue-200/60 text-sm sm:text-base font-black">六赫茲領航，減輕企業轉型負擔</p>
             </div>
 
             <div className="grid grid-cols-1 gap-6 sm:gap-10 w-full max-w-md">
@@ -236,14 +236,14 @@ const ProjectBackground = () => {
           <div className="lg:col-span-1">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-black uppercase tracking-wider mb-6">
               <Info className="w-4 h-4" />
-              計畫背景
+              六赫茲計畫背景
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 mb-8 leading-tight tracking-tight">
               因應全球趨勢 <br />
               帶動產業 <span className="text-blue-700">全面升級</span>
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed font-black">
-              面對全球數位化與淨零轉型的雙重挑戰，本計畫旨在透過政府資源，協助企業跨越轉型門檻，建立永續競爭力。
+              面對全球數位化與淨零轉型的雙重挑戰，六赫茲旨在透過政府資源，協助企業跨越轉型門檻，建立永續競爭力。
             </p>
           </div>
           
@@ -279,7 +279,7 @@ const ProjectBackground = () => {
         <div className="pt-32 border-t border-slate-200 relative">
           <div className="text-center mb-20">
             <h3 className="text-4xl font-black text-slate-900 mb-6 tracking-tight">您的企業在轉型路上是否面臨以下挑戰？</h3>
-            <p className="text-lg text-slate-500 font-black max-w-2xl mx-auto">我們深入產業第一線，了解企業在變革中所遭遇的真實困境。</p>
+            <p className="text-lg text-slate-500 font-black max-w-2xl mx-auto">六赫茲深入產業第一線，了解企業在變革中所遭遇的真實困境。</p>
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
@@ -344,7 +344,7 @@ const WhyChooseUs = () => {
     {
       icon: <Users className="w-8 h-8" />,
       title: "資深零售顧問 一對一陪跑",
-      desc: "資深零售顧問團隊親自進駐廠區，進行深度實地檢測與產業現況調查。我們深入一線了解真實痛點，拒絕僅靠網路資料或遠端會議的紙上談兵。",
+      desc: "資深零售顧問團隊親自進駐廠區，進行深度實地檢測與產業現況調查。六赫茲深入一線了解真實痛點，拒絕僅靠網路資料或遠端會議的紙上談兵。",
       tag: "實戰導向",
       isFeature: true
     }
@@ -355,7 +355,7 @@ const WhyChooseUs = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <h2 className="text-4xl font-black text-slate-900 mb-4 tracking-tight">為什麼選擇六赫茲？</h2>
-          <p className="text-lg text-slate-500 max-w-2xl mx-auto font-black">我們不僅是顧問，更是您企業轉型路上的戰略夥伴。</p>
+          <p className="text-lg text-slate-500 max-w-2xl mx-auto font-black">六赫茲不僅是顧問，更是您企業轉型路上的戰略夥伴。</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
@@ -464,10 +464,10 @@ const SuccessStories = () => {
         <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-[10px] font-black uppercase tracking-widest mb-6 border border-blue-500/30">
-              Success Stories
+              六赫茲 Success Stories
             </div>
             <h2 className="text-3xl sm:text-5xl font-black mb-6 tracking-tight">實戰成效見證</h2>
-            <p className="text-lg sm:text-xl text-slate-400 font-black">歷年來本補助案已協助超過百家企業完成轉型升級，創造實質商業價值。</p>
+            <p className="text-lg sm:text-xl text-slate-400 font-black">歷年來六赫茲已協助超過百家企業完成轉型升級，創造實質商業價值。</p>
           </div>
           <div className="grid grid-cols-2 sm:flex gap-4 w-full sm:w-auto">
             <div className="text-center px-4 sm:px-8 py-4 bg-white/5 rounded-3xl border border-white/10 backdrop-blur-sm">
@@ -504,120 +504,102 @@ const SuccessStories = () => {
 };
 
 const Measures = () => {
-  const measures = [
-    { icon: <Cpu className="w-6 h-6" />, title: 'AI 數位轉型', desc: '對接 Asgard AI 輿情系統與資深零售顧問一對一陪跑，精準診斷企業痛點，啟動轉型藍圖。' },
-    { icon: <GraduationCap className="w-6 h-6" />, title: 'AI 人才培育', desc: '提供從決策層到執行層的 AI 職能培訓，建立企業內部技術力。' },
-    { icon: <TrendingUp className="w-6 h-6" />, title: '金融支持', desc: '協助對接優惠融資專案，優化財務結構，確保轉型資金無虞。' },
-    { icon: <Globe className="w-6 h-6" />, title: '市場拓展', desc: '利用大數據分析國際趨勢，協助企業精準定位，開拓海外商機。' },
-    { icon: <Wrench className="w-6 h-6" />, title: '技術輔導', desc: '媒合法人研發資源，解決關鍵技術瓶頸，加速產品研發週期。' },
-    { icon: <Zap className="w-6 h-6" />, title: 'ESCO 節能', desc: '導入能源管理系統與節能設備，降低營運成本，達成減碳目標。' },
-    { icon: <Briefcase className="w-6 h-6" />, title: '勞動力升級', desc: '優化人力資源配置，補助辦訓費用，提升員工產值與留任率。' },
+  const layers = [
+    {
+      title: "市場與資金戰略 (Growth & Capital)",
+      items: [
+        { icon: <Globe className="w-6 h-6" />, title: '市場拓展', desc: '利用大數據分析國際趨勢，協助企業精準定位，開拓海外商機。' },
+        { icon: <TrendingUp className="w-6 h-6" />, title: '金融支持', desc: '協助對接優惠融資專案，優化財務結構，確保轉型資金無虞。' },
+      ]
+    },
+    {
+      title: "核心技術轉型 (Core Capability)",
+      items: [
+        { icon: <Cpu className="w-6 h-6" />, title: 'AI 數位轉型', desc: '對接 Asgard AI 輿情系統與資深零售顧問一對一陪跑，精準診斷企業痛點。' },
+        { icon: <Wrench className="w-6 h-6" />, title: '技術輔導', desc: '媒合法人研發資源，解決關鍵技術瓶頸，加速產品研發週期。' },
+      ]
+    },
+    {
+      title: "營運永續基石 (Operational Foundation)",
+      items: [
+        { icon: <Zap className="w-6 h-6" />, title: 'ESCO 節能', desc: '導入能源管理系統與節能設備，降低營運成本，達成減碳目標。' },
+        { icon: <Briefcase className="w-6 h-6" />, title: '勞動力升級', desc: '優化人力資源配置，補助辦訓費用，提升員工產值與留任率。' },
+      ]
+    }
   ];
 
   return (
-    <section id="overview" className="py-32 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-          <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-[10px] font-black uppercase tracking-widest mb-6">
-              Core Measures
-            </div>
-            <h2 className="text-3xl sm:text-5xl font-black text-slate-900 mb-6 tracking-tight">全方位戰略支援</h2>
-            <p className="text-xl text-slate-500 font-black">我們提供七大核心扶持措施，確保企業在轉型路徑上的每一步都穩健有力。</p>
+    <section id="overview" className="py-32 bg-white overflow-hidden relative">
+      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-slate-50 to-transparent"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-24">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-[10px] font-black uppercase tracking-widest mb-6">
+            六赫茲 Strategic Architecture
           </div>
-          <div className="hidden md:block">
-            <div className="px-6 py-3 bg-slate-900 text-white rounded-2xl text-sm font-black tracking-widest uppercase shadow-xl">
-              政府領航 · 專業對接
-            </div>
-          </div>
+          <h2 className="text-3xl sm:text-5xl font-black text-slate-900 mb-6 tracking-tight">全方位戰略支援架構</h2>
+          <p className="text-xl text-slate-500 font-black max-w-2xl mx-auto">
+            六赫茲構建的三層戰略體系，從底層營運到核心技術，再到市場拓展，全方位支撐企業轉型。
+          </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-6">
-          {measures.map((m, idx) => (
-            <motion.div 
-              key={idx} 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.05 }}
-              className="flex flex-col p-8 rounded-[2.5rem] bg-white border border-slate-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group"
-            >
-              <div className="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-400 mb-8 group-hover:bg-blue-700 group-hover:text-white group-hover:shadow-lg group-hover:shadow-blue-200 transition-all duration-300">
-                {m.icon}
+
+        <div className="relative max-w-5xl mx-auto">
+          {/* Vertical line connecting layers */}
+          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-slate-200 -translate-x-1/2 hidden md:block"></div>
+
+          <div className="space-y-20 relative">
+            {layers.map((layer, lIdx) => (
+              <div key={lIdx} className="relative">
+                {/* Layer Label */}
+                <div className="flex justify-center mb-10 relative">
+                  <div className="absolute top-1/2 left-0 right-0 h-px bg-slate-100 -z-10 hidden md:block"></div>
+                  <div className="px-8 py-3 bg-slate-900 text-white text-[10px] sm:text-xs font-black rounded-2xl tracking-[0.2em] uppercase shadow-2xl shadow-slate-200">
+                    {layer.title}
+                  </div>
+                </div>
+
+                {/* Items in Layer */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {layer.items.map((m, iIdx) => (
+                    <motion.div
+                      key={iIdx}
+                      initial={{ opacity: 0, x: iIdx === 0 ? -30 : 30 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: (lIdx * 2 + iIdx) * 0.1, duration: 0.8 }}
+                      className="flex gap-6 p-8 rounded-[2.5rem] bg-white border border-slate-100 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 group relative"
+                    >
+                      <div className="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-400 shrink-0 group-hover:bg-blue-700 group-hover:text-white group-hover:shadow-lg group-hover:shadow-blue-200 transition-all duration-300">
+                        {m.icon}
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-black text-slate-900 mb-2 group-hover:text-blue-700 transition-colors">{m.title}</h4>
+                        <p className="text-sm text-slate-500 leading-relaxed font-black">{m.desc}</p>
+                      </div>
+                      
+                      {/* Decorative connector dot */}
+                      <div className={cn(
+                        "absolute top-1/2 w-3 h-3 bg-blue-500 rounded-full border-4 border-white shadow-sm hidden md:block",
+                        iIdx === 0 ? "-right-1.5 -translate-y-1/2" : "-left-1.5 -translate-y-1/2"
+                      )}></div>
+                    </motion.div>
+                  ))}
+                </div>
               </div>
-              <h4 className="text-lg font-black text-slate-900 mb-4 group-hover:text-blue-700 transition-colors">{m.title}</h4>
-              <p className="text-sm text-slate-500 leading-relaxed font-black">{m.desc}</p>
-            </motion.div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
   );
 };
 
-const Talent = () => (
-  <section id="talent" className="py-20 sm:py-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="bg-slate-900 rounded-[2.5rem] lg:rounded-[4rem] p-8 sm:p-12 md:p-24 text-white overflow-hidden relative shadow-3xl">
-      <div className="absolute top-0 right-0 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-blue-600/20 rounded-full -mr-40 sm:-mr-80 -mt-40 sm:-mt-80 blur-[100px] sm:blur-[150px]"></div>
-      <div className="absolute bottom-0 left-0 w-[200px] sm:w-[400px] h-[200px] sm:h-[400px] bg-indigo-600/10 rounded-full -ml-20 sm:-ml-40 -mb-20 sm:-mb-40 blur-[80px] sm:blur-[100px]"></div>
-      
-      <div className="relative z-10 grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
-        <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-[10px] font-black uppercase tracking-widest mb-6 sm:mb-8 border border-blue-500/30">
-            Talent Development
-          </div>
-          <h2 className="text-4xl sm:text-6xl font-black mb-6 sm:mb-8 leading-tight tracking-tighter">AI 人才培育 <br /><span className="text-blue-400">核心競爭力</span></h2>
-          <p className="text-lg sm:text-xl text-slate-300 mb-8 sm:mb-12 leading-relaxed font-black">
-            強化產業勞工數位轉型知識，建立企業 AI 核心競爭力。
-            每家企業最高可獲得 <span className="text-blue-400 font-black underline underline-offset-8">12 萬元</span> 學費全額補助。
-          </p>
-          <div className="space-y-6 sm:space-y-8">
-            {[
-              { title: '戰略決策層', desc: 'CEO 專班、AI 轉型策略 4小時工作坊、數位領導力培訓。', icon: <Target className="w-5 h-5" /> },
-              { title: '技術執行層', desc: 'iPAS 實務班、AI 職能提升班、自動化設備操作。', icon: <Wrench className="w-5 h-5" /> },
-              { title: '基礎保障層', desc: '減班休息勞工參訓津貼、基礎數位工具應用培訓。', icon: <ShieldCheck className="w-5 h-5" /> }
-            ].map((item, idx) => (
-              <div key={idx} className="flex items-start gap-4 sm:gap-5 group">
-                <div className="mt-1 w-10 h-10 rounded-2xl bg-blue-500/20 flex items-center justify-center border border-blue-500/30 group-hover:bg-blue-500 group-hover:text-white transition-all shrink-0">
-                  {item.icon}
-                </div>
-                <div>
-                  <h4 className="text-base sm:text-lg font-black text-white mb-1 sm:mb-2 tracking-wide">{item.title}</h4>
-                  <p className="text-xs sm:text-sm text-slate-400 leading-relaxed font-black">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        
-        <div className="grid grid-cols-1 gap-6 sm:gap-8">
-          <div className="bg-white/5 p-8 sm:p-12 rounded-[2rem] lg:rounded-[3.5rem] backdrop-blur-xl border border-white/10 relative group overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            <div className="relative z-10">
-              <div className="text-5xl sm:text-7xl font-black mb-2 sm:mb-4 text-blue-400 tracking-tighter">5,000+</div>
-              <div className="text-slate-300 text-[10px] sm:text-xs font-black uppercase tracking-[0.2em]">年度累計培訓人次</div>
-              <div className="mt-4 sm:mt-6 h-1 w-16 sm:w-20 bg-blue-500/30 rounded-full"></div>
-            </div>
-          </div>
-          <div className="bg-white/5 p-8 sm:p-12 rounded-[2rem] lg:rounded-[3.5rem] backdrop-blur-xl border border-white/10 relative group overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            <div className="relative z-10">
-              <div className="text-5xl sm:text-7xl font-black mb-2 sm:mb-4 text-white tracking-tighter">92%</div>
-              <div className="text-slate-300 text-[10px] sm:text-xs font-black uppercase tracking-[0.2em]">企業轉型實質成效回饋</div>
-              <div className="mt-4 sm:mt-6 h-1 w-16 sm:w-20 bg-white/20 rounded-full"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-);
-
 const Support = () => (
   <section id="support" className="py-24 bg-slate-50">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-20">
         <h2 className="text-4xl font-black text-slate-900 mb-4 tracking-tight">加值支援服務</h2>
-        <p className="text-lg text-slate-500 font-black">除了核心輔導，我們更提供多維度的資源對接</p>
+        <p className="text-lg text-slate-500 font-black">除了核心輔導，六赫茲更提供多維度的資源對接</p>
       </div>
       <div className="grid md:grid-cols-3 gap-10">
         {[
@@ -776,10 +758,10 @@ const ApplicationForm = () => {
 
 const FAQ = () => {
   const faqs = [
-    { q: "企業申請本計畫需要具備什麼資格？", a: "凡在台灣合法登記之企業，且無重大違規紀錄者皆可申請。我們將根據企業規模與產業別，媒合最合適的補助專案。" },
+    { q: "企業申請六赫茲陪跑計畫需要具備什麼資格？", a: "凡在台灣合法登記之企業，且無重大違規紀錄者皆可申請。六赫茲將根據企業規模與產業別，媒合最合適的補助專案。" },
     { q: "「1 萬換 20 萬」的方案包含哪些具體服務？", a: "包含 Asgard AI 輿情口碑系統 2 個月使用權、資深零售顧問一對一陪跑，以及可從「消費者訪談」、「AI 基礎課」、「會員經營」中三選一的 4小時 深度工作坊。" },
     { q: "計畫執行週期通常需要多久？", a: "初步診斷通常在 2-4 週內完成。後續的深度輔導與技術導入則視企業需求而定，通常為 3-6 個月。" },
-    { q: "除了 AI 轉型，淨零排放相關的補助也可以申請嗎？", a: "是的，本計畫採「雙軸轉型」策略，數位與淨零資源可同步對接，協助企業達成 ESG 永續目標。" }
+    { q: "除了 AI 轉型，淨零排放相關的補助也可以申請嗎？", a: "是的，六赫茲採「雙軸轉型」策略，數位與淨零資源可同步對接，協助企業達成 ESG 永續目標。" }
   ];
 
   const [openIdx, setOpenIdx] = useState<number | null>(null);
@@ -838,7 +820,7 @@ const Footer = () => (
             <span className="text-sm font-light text-blue-700 uppercase tracking-[0.3em]">強化企業競爭力</span>
           </div>
           <p className="text-slate-500 text-lg leading-relaxed max-w-md font-light">
-            六赫茲 (The Hex) 致力於成為企業轉型路上的最強後盾，對接政府資源，共創產業新價值。我們以專業診斷為起點，陪伴企業邁向 AI 與淨零的永續未來。
+            六赫茲 (The Hex) 致力於成為企業轉型路上的最強後盾，對接政府資源，共創產業新價值。六赫茲以專業診斷為起點，陪伴企業邁向 AI 與淨零的永續未來。
           </p>
         </div>
         
@@ -877,7 +859,6 @@ export default function App() {
       <ProjectBackground />
       <Measures />
       <SuccessStories />
-      <Talent />
       <Support />
       <Process />
       <FAQ />
