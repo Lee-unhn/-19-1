@@ -69,10 +69,10 @@ const Hero = () => (
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
           <button 
-            onClick={() => document.getElementById('background')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => document.getElementById('success-stories')?.scrollIntoView({ behavior: 'smooth' })}
             className="px-10 py-5 rounded-2xl border-2 border-slate-200 bg-white font-black text-lg text-slate-700 hover:bg-slate-50 transition-all active:scale-95"
           >
-            瞭解計畫細節
+            實戰成效
           </button>
         </div>
         
@@ -408,7 +408,7 @@ const SuccessStories = () => {
   ];
 
   return (
-    <section className="py-32 bg-slate-900 text-white overflow-hidden relative">
+    <section id="success-stories" className="py-32 bg-slate-900 text-white overflow-hidden relative">
       <div className="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-blue-600 rounded-full blur-[150px]"></div>
       </div>
@@ -772,7 +772,7 @@ const Footer = () => (
           <ul className="space-y-4 text-sm text-slate-500 font-light">
             <li><button onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})} className="hover:text-blue-700 transition-colors">計畫簡介</button></li>
             <li><button onClick={() => document.getElementById('overview')?.scrollIntoView({behavior: 'smooth'})} className="hover:text-blue-700 transition-colors">策略總覽</button></li>
-            <li><button onClick={() => document.getElementById('talent')?.scrollIntoView({behavior: 'smooth'})} className="hover:text-blue-700 transition-colors">人才培育</button></li>
+            <li><button onClick={() => document.getElementById('success-stories')?.scrollIntoView({behavior: 'smooth'})} className="hover:text-blue-700 transition-colors">實戰成效</button></li>
             <li><button onClick={() => document.getElementById('service-ecosystem')?.scrollIntoView({behavior: 'smooth'})} className="hover:text-blue-700 transition-colors">服務流程</button></li>
           </ul>
         </div>
