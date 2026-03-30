@@ -25,7 +25,9 @@ import {
   Package,
   AlertCircle,
   Layers,
-  Coins
+  Coins,
+  ChevronRight,
+  ChevronDown
 } from 'lucide-react';
 import { cn } from './lib/utils';
 
@@ -199,28 +201,28 @@ const Hero = () => (
   </section>
 );
 
-const ProjectBackground = () => {
+const Challenges = () => {
   const challenges = [
     {
-      icon: <AlertCircle className="w-8 h-8" />,
+      icon: <AlertCircle className="w-6 h-6 sm:w-8 sm:h-8" />,
       title: "轉型困惑",
       desc: "不知產業轉型如何做起。",
       color: "bg-red-50 text-red-600 border-red-100"
     },
     {
-      icon: <Layers className="w-8 h-8" />,
+      icon: <Layers className="w-6 h-6 sm:w-8 sm:h-8" />,
       title: "資源匱乏",
       desc: "升級產品與技術缺乏相關資源。",
       color: "bg-orange-50 text-orange-600 border-orange-100"
     },
     {
-      icon: <Coins className="w-8 h-8" />,
+      icon: <Coins className="w-6 h-6 sm:w-8 sm:h-8" />,
       title: "資金壓力",
       desc: "因應供應鏈、市場調整需要資金支持。",
       color: "bg-amber-50 text-amber-600 border-amber-100"
     },
     {
-      icon: <GraduationCap className="w-8 h-8" />,
+      icon: <GraduationCap className="w-6 h-6 sm:w-8 sm:h-8" />,
       title: "技能斷層",
       desc: "勞工缺乏轉型所需的 AI 知識與技能。",
       color: "bg-rose-50 text-rose-600 border-rose-100"
@@ -228,83 +230,33 @@ const ProjectBackground = () => {
   ];
 
   return (
-    <section id="background" className="py-32 bg-slate-50 border-y border-slate-100 overflow-hidden relative">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-blue-50/50 rounded-full blur-[120px] -z-10"></div>
-      
+    <section id="challenges" className="py-20 bg-slate-50 border-y border-slate-100 overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-3 gap-16 items-start mb-32">
-          <div className="lg:col-span-1">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-black uppercase tracking-wider mb-6">
-              <Info className="w-4 h-4" />
-              六赫茲計畫背景
-            </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 mb-8 leading-tight tracking-tight">
-              因應全球趨勢 <br />
-              帶動產業 <span className="text-blue-700">全面升級</span>
-            </h2>
-            <p className="text-lg text-slate-600 leading-relaxed font-black">
-              面對全球數位化與淨零轉型的雙重挑戰，六赫茲旨在透過政府資源，協助企業跨越轉型門檻，建立永續競爭力。
-            </p>
-          </div>
-          
-          <div className="lg:col-span-2 grid sm:grid-cols-2 gap-8">
-            <div className="bg-white p-12 rounded-[3.5rem] shadow-sm border border-slate-100 hover:shadow-2xl transition-all duration-500 group relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-700"></div>
-              <div className="relative">
-                <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-700 mb-8 group-hover:bg-blue-700 group-hover:text-white transition-all duration-300 shadow-sm">
-                  <TrendingUp className="w-8 h-8" />
-                </div>
-                <h3 className="text-2xl font-black text-slate-900 mb-4">數位轉型領航</h3>
-                <p className="text-slate-500 text-base leading-relaxed font-black">
-                  協助企業導入 AI 技術、大數據分析與自動化設備，優化生產流程，提升營運效率與產品附加價值。
-                </p>
-              </div>
-            </div>
-            
-            <div className="bg-white p-12 rounded-[3.5rem] shadow-sm border border-slate-100 hover:shadow-2xl transition-all duration-500 group relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-50 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-700"></div>
-              <div className="relative">
-                <div className="w-16 h-16 bg-emerald-50 rounded-2xl flex items-center justify-center text-emerald-700 mb-8 group-hover:bg-emerald-700 group-hover:text-white transition-all duration-300 shadow-sm">
-                  <Leaf className="w-8 h-8" />
-                </div>
-                <h3 className="text-2xl font-black text-slate-900 mb-4">淨零排放路徑</h3>
-                <p className="text-slate-500 text-base leading-relaxed font-black">
-                  對應國際減碳要求，提供 ESCO 節能診斷、低碳技術導入與碳盤查輔導，助企業達成綠色轉型目標。
-                </p>
-              </div>
-            </div>
-          </div>
+        <div className="text-center mb-12 sm:mb-16">
+          <h3 className="text-3xl sm:text-4xl font-black text-slate-900 mb-4 tracking-tight">您的企業在轉型路上是否面臨以下挑戰？</h3>
+          <p className="text-base sm:text-lg text-slate-500 font-black max-w-2xl mx-auto">六赫茲深入產業第一線，了解企業在變革中所遭遇的真實困境。</p>
         </div>
-
-        <div className="pt-32 border-t border-slate-200 relative">
-          <div className="text-center mb-20">
-            <h3 className="text-4xl font-black text-slate-900 mb-6 tracking-tight">您的企業在轉型路上是否面臨以下挑戰？</h3>
-            <p className="text-lg text-slate-500 font-black max-w-2xl mx-auto">六赫茲深入產業第一線，了解企業在變革中所遭遇的真實困境。</p>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
-            {challenges.map((item, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1, duration: 0.6 }}
-                className="group relative"
-              >
-                <div className="absolute inset-0 bg-white rounded-[2rem] sm:rounded-[3rem] shadow-sm border border-slate-100 group-hover:shadow-3xl group-hover:-translate-y-3 transition-all duration-500"></div>
-                <div className="relative p-6 sm:p-10 flex flex-col items-center text-center">
-                  <div className={`w-16 h-16 sm:w-24 sm:h-24 rounded-2xl sm:rounded-[2.5rem] flex items-center justify-center mb-6 sm:mb-10 border-2 ${item.color} group-hover:rotate-12 transition-transform duration-500 shadow-sm`}>
-                    {item.icon}
-                  </div>
-                  <h4 className="text-xl sm:text-2xl font-black text-slate-900 mb-3 sm:mb-5 tracking-tight">{item.title}</h4>
-                  <p className="text-slate-500 text-sm sm:text-base leading-relaxed font-black">{item.desc}</p>
-                  
-                  <div className="mt-6 sm:mt-10 w-10 h-1.5 bg-slate-100 rounded-full group-hover:w-20 group-hover:bg-blue-500 transition-all duration-500"></div>
+        
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
+          {challenges.map((item, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1, duration: 0.5 }}
+              className="group relative"
+            >
+              <div className="absolute inset-0 bg-white rounded-[1.5rem] sm:rounded-[3rem] shadow-sm border border-slate-100 group-hover:shadow-xl group-hover:-translate-y-2 transition-all duration-500"></div>
+              <div className="relative p-5 sm:p-10 flex flex-col items-center text-center">
+                <div className={`w-12 h-12 sm:w-20 sm:h-20 rounded-xl sm:rounded-[2rem] flex items-center justify-center mb-4 sm:mb-8 border-2 ${item.color} group-hover:rotate-6 transition-transform duration-500 shadow-sm`}>
+                  {item.icon}
                 </div>
-              </motion.div>
-            ))}
-          </div>
+                <h4 className="text-lg sm:text-xl font-black text-slate-900 mb-2 sm:mb-4 tracking-tight">{item.title}</h4>
+                <p className="text-slate-500 text-[10px] sm:text-sm leading-relaxed font-black">{item.desc}</p>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
@@ -594,33 +546,7 @@ const Measures = () => {
   );
 };
 
-const Support = () => (
-  <section id="support" className="py-24 bg-slate-50">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="text-center mb-20">
-        <h2 className="text-4xl font-black text-slate-900 mb-4 tracking-tight">加值支援服務</h2>
-        <p className="text-lg text-slate-500 font-black">除了核心輔導，六赫茲更提供多維度的資源對接</p>
-      </div>
-      <div className="grid md:grid-cols-3 gap-10">
-        {[
-          { icon: <TrendingUp />, title: "財務來相挺", desc: "提供融資診斷與債務協商服務，協助企業爭取營運資金，穩定現金流。" },
-          { icon: <Zap />, title: "勞動力再充電", desc: "補助企業辦理內部訓練費用，個別型最高補助達 95 萬元。" },
-          { icon: <Leaf />, title: "綠色節能升級", desc: "能源流向盤點、設備效率診斷，提供最具成本效益的減碳改善建議。" }
-        ].map((s, idx) => (
-          <div key={idx} className="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300">
-            <div className="w-14 h-14 bg-blue-50 text-blue-700 rounded-2xl flex items-center justify-center mb-8">
-              {s.icon}
-            </div>
-            <h3 className="text-2xl font-black text-slate-900 mb-4">{s.title}</h3>
-            <p className="text-slate-500 leading-relaxed font-black">{s.desc}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-);
-
-const Process = () => {
+const ServiceEcosystem = () => {
   const steps = [
     { title: '線上申請', desc: '填寫企業基本需求，完成初步意願登記。', icon: <Rocket className="w-5 h-5" /> },
     { title: '資格審核', desc: '由專人確認申請資格，並指派合適資深顧問團隊。', icon: <ShieldCheck className="w-5 h-5" /> },
@@ -629,38 +555,65 @@ const Process = () => {
   ];
 
   return (
-    <section id="process" className="py-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="text-center mb-24">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-[10px] font-black uppercase tracking-widest mb-6">
-          Standardized Workflow
+    <section id="service-ecosystem" className="py-32 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-24">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-[10px] font-black uppercase tracking-widest mb-6">
+            Standardized Workflow
+          </div>
+          <h2 className="text-4xl sm:text-5xl font-black text-slate-900 mb-6 tracking-tight">標準化輔導流程</h2>
+          <p className="text-lg sm:text-xl text-slate-500 max-w-3xl mx-auto font-black leading-relaxed">
+            專業、透明、高效的轉型路徑，確保每一個環節都精準到位。
+          </p>
         </div>
-        <h2 className="text-5xl font-black text-slate-900 mb-6 tracking-tight">標準化輔導流程</h2>
-        <p className="text-xl text-slate-500 max-w-2xl mx-auto font-black">專業、透明、高效的轉型路徑，確保每一個環節都精準到位。</p>
-      </div>
-      <div className="grid md:grid-cols-4 gap-12 relative">
-        <div className="hidden md:block absolute top-16 left-0 right-0 h-1 bg-slate-100 -z-10"></div>
-        {steps.map((step, idx) => (
-          <motion.div 
-            key={idx} 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: idx * 0.1 }}
-            className="relative group text-center"
-          >
-            <div className="w-32 h-32 rounded-[2.5rem] bg-white border-8 border-slate-50 shadow-xl flex flex-col items-center justify-center mb-10 mx-auto group-hover:bg-blue-700 group-hover:border-blue-50 transition-all duration-500 relative">
-              <span className="absolute -top-4 -left-4 w-10 h-10 bg-slate-900 text-white rounded-2xl flex items-center justify-center text-sm font-black group-hover:bg-emerald-500 transition-colors">
-                0{idx + 1}
-              </span>
-              <div className="text-slate-300 group-hover:text-blue-200 transition-colors mb-2">
-                {step.icon}
-              </div>
-              <span className="text-xs font-black text-slate-400 group-hover:text-white/50 transition-colors uppercase tracking-widest">Step</span>
-            </div>
-            <h3 className="text-2xl font-black text-slate-900 mb-4">{step.title}</h3>
-            <p className="text-sm text-slate-500 leading-relaxed font-black px-4">{step.desc}</p>
-          </motion.div>
-        ))}
+
+        {/* Process Steps */}
+        <div className="relative">
+          {/* Connecting Line - Always Horizontal */}
+          <div className="absolute top-12 left-0 right-0 h-0.5 bg-slate-100 -z-10">
+            <div className="absolute top-0 left-0 h-full bg-blue-700 w-0 group-hover:w-full transition-all duration-1000"></div>
+          </div>
+
+          {/* 4-Column Grid for all sizes to show all steps at once */}
+          <div className="grid grid-cols-4 gap-2 sm:gap-4 lg:gap-8">
+            {steps.map((step, idx) => (
+              <motion.div 
+                key={idx} 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+                className="relative group flex flex-col items-center text-center"
+              >
+                {/* Step Circle - Scaled for mobile */}
+                <div className="w-12 h-12 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-xl sm:rounded-[2rem] bg-white border-2 sm:border-4 border-slate-50 shadow-md sm:shadow-lg flex flex-col items-center justify-center mb-4 sm:mb-8 group-hover:bg-blue-700 group-hover:border-blue-50 transition-all duration-500 relative z-10">
+                  <span className="absolute -top-1 -left-1 sm:-top-2 sm:-left-2 w-5 h-5 sm:w-8 sm:h-8 bg-slate-900 text-white rounded-md sm:rounded-xl flex items-center justify-center text-[10px] sm:text-xs font-black group-hover:bg-emerald-500 transition-colors shadow-lg">
+                    0{idx + 1}
+                  </span>
+                  <div className="text-slate-300 group-hover:text-blue-200 transition-colors scale-75 sm:scale-100">
+                    {step.icon}
+                  </div>
+                </div>
+
+                {/* Content - Scaled for mobile */}
+                <div className="px-1 sm:px-4">
+                  <h4 className="text-[10px] sm:text-lg lg:text-xl font-black text-slate-900 mb-1 sm:mb-3 group-hover:text-blue-700 transition-colors leading-tight">{step.title}</h4>
+                  <p className="hidden sm:block text-[10px] sm:text-xs text-slate-500 leading-relaxed font-black">{step.desc}</p>
+                </div>
+
+                {/* Arrow Indicator - Always Horizontal, hidden on very small screens if too cramped */}
+                {idx < steps.length - 1 && (
+                  <div className="absolute top-6 sm:top-10 lg:top-12 left-[calc(100%-0.5rem)] sm:left-[calc(100%-1rem)] -translate-y-1/2 z-20 flex items-center justify-center">
+                    <div className="w-4 h-4 sm:w-8 sm:h-8 rounded-full bg-white border border-slate-100 shadow-sm flex items-center justify-center text-slate-300 group-hover:text-blue-700 group-hover:border-blue-200 transition-all duration-300">
+                      <ChevronRight className="w-2 h-2 sm:w-4 h-4" />
+                    </div>
+                  </div>
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -814,24 +767,26 @@ const Footer = () => (
   <footer className="py-24 bg-white border-t border-slate-100">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid md:grid-cols-4 gap-16 mb-20">
-        <div className="md:col-span-2">
-          <div className="flex flex-col mb-8">
-            <span className="text-sm font-light text-blue-700 uppercase tracking-[0.3em] mb-1">推動產業升級</span>
-            <span className="text-sm font-light text-blue-700 uppercase tracking-[0.3em]">強化企業競爭力</span>
-          </div>
-          <p className="text-slate-500 text-lg leading-relaxed max-w-md font-light">
-            六赫茲 (The Hex) 致力於成為企業轉型路上的最強後盾，對接政府資源，共創產業新價值。六赫茲以專業診斷為起點，陪伴企業邁向 AI 與淨零的永續未來。
-          </p>
-        </div>
-        
-        <div>
+        <div className="md:col-span-1">
           <h4 className="font-black text-slate-900 uppercase tracking-[0.2em] text-xs mb-8">計畫專區</h4>
           <ul className="space-y-4 text-sm text-slate-500 font-light">
             <li><button onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})} className="hover:text-blue-700 transition-colors">計畫簡介</button></li>
             <li><button onClick={() => document.getElementById('overview')?.scrollIntoView({behavior: 'smooth'})} className="hover:text-blue-700 transition-colors">策略總覽</button></li>
             <li><button onClick={() => document.getElementById('talent')?.scrollIntoView({behavior: 'smooth'})} className="hover:text-blue-700 transition-colors">人才培育</button></li>
-            <li><button onClick={() => document.getElementById('process')?.scrollIntoView({behavior: 'smooth'})} className="hover:text-blue-700 transition-colors">輔導流程</button></li>
+            <li><button onClick={() => document.getElementById('service-ecosystem')?.scrollIntoView({behavior: 'smooth'})} className="hover:text-blue-700 transition-colors">服務流程</button></li>
           </ul>
+        </div>
+
+        <div className="md:col-span-1"></div>
+
+        <div className="md:col-span-2 text-right">
+          <div className="flex flex-col mb-8 items-end">
+            <span className="text-sm font-light text-blue-700 uppercase tracking-[0.3em] mb-1">推動產業升級</span>
+            <span className="text-sm font-light text-blue-700 uppercase tracking-[0.3em]">強化企業競爭力</span>
+          </div>
+          <p className="text-slate-500 text-lg leading-relaxed max-w-md font-light ml-auto">
+            六赫茲 (The Hex) 致力於成為企業轉型路上的最強後盾，對接政府資源，共創產業新價值。六赫茲以專業診斷為起點，陪伴企業邁向 AI 與淨零的永續未來。
+          </p>
         </div>
       </div>
       
@@ -856,11 +811,10 @@ export default function App() {
     <div className="min-h-screen font-sans selection:bg-blue-100 selection:text-blue-900">
       <Hero />
       <WhyChooseUs />
-      <ProjectBackground />
+      <Challenges />
       <Measures />
       <SuccessStories />
-      <Support />
-      <Process />
+      <ServiceEcosystem />
       <FAQ />
       <ApplicationForm />
       <Footer />
