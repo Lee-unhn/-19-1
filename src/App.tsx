@@ -43,20 +43,20 @@ const Hero = () => (
       >
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 text-blue-700 text-[11px] font-black uppercase tracking-[0.2em] mb-8 border border-blue-100 shadow-sm">
           <Rocket className="w-3.5 h-3.5" />
-          2026 產業轉型領航計畫
+          2026 企業陪跑服務計劃
         </div>
         <h1 className="text-4xl sm:text-6xl lg:text-8xl font-black text-slate-900 leading-[1.05] mb-6 tracking-tighter">
-          AI 領航 <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-indigo-600 to-blue-800">企業升級</span>
+          企業陪跑 <br />
+          <span className="inline-block ml-12 sm:ml-24 text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-indigo-600 to-blue-800">服務計劃</span>
         </h1>
         <div className="mb-8 flex items-center gap-3">
           <div className="h-px w-12 bg-blue-200"></div>
           <p className="text-xl sm:text-2xl font-black text-blue-700 tracking-tight">
-            只需 <span className="text-3xl sm:text-4xl text-slate-900 underline decoration-blue-500/30 underline-offset-4">1 萬</span>，啟動企業 AI 轉型
+            只需 <span className="text-3xl sm:text-4xl text-slate-900 underline decoration-blue-500/30 underline-offset-4 font-black">1 萬</span>，啟動企業 AI 轉型
           </p>
         </div>
-        <p className="text-xl text-slate-500 mb-10 leading-relaxed max-w-lg font-medium">
-          六赫茲專業顧問團隊，對接政府專案資源，協助企業跨越數位與淨零門檻，打造永續競爭力。
+        <p className="text-xl text-slate-500 mb-10 leading-relaxed max-w-lg font-light">
+          資深顧問團隊，對接政府專案資源，協助企業跨越數位與淨零門檻，打造永續競爭力。
         </p>
         <div className="flex flex-col sm:flex-row gap-5">
           <button 
@@ -83,8 +83,8 @@ const Hero = () => (
                 </div>
               ))}
             </div>
-            <p className="text-sm text-slate-400 font-bold">
-              已有 <span className="text-blue-700">500+</span> 家企業完成初步診斷
+            <p className="text-sm text-slate-400 font-black">
+              已有 <span className="text-blue-700 font-black">500+</span> 家企業完成初步診斷
             </p>
           </div>
           
@@ -120,7 +120,7 @@ const Hero = () => (
                 限時限量 專案補助
               </div>
               <h3 className="text-3xl sm:text-5xl font-black text-white mb-4 tracking-tight">轉型啟動超值方案</h3>
-              <p className="text-blue-200/60 text-sm sm:text-base font-medium">政府領航，減輕企業轉型負擔</p>
+              <p className="text-blue-200/60 text-sm sm:text-base font-black">政府領航，減輕企業轉型負擔</p>
             </div>
 
             <div className="grid grid-cols-1 gap-6 sm:gap-10 w-full max-w-md">
@@ -135,7 +135,7 @@ const Hero = () => (
                   <span className="text-5xl sm:text-7xl font-black text-white">1</span>
                   <span className="text-xl sm:text-3xl font-black text-white">萬元</span>
                 </div>
-                <p className="text-[10px] sm:text-xs text-slate-400 mt-4 sm:mt-6 font-bold tracking-wider">「19+1」方案：極小化轉型成本</p>
+                <p className="text-[10px] sm:text-xs text-slate-400 mt-4 sm:mt-6 font-black tracking-wider">「19+1」方案：極小化轉型成本</p>
               </div>
               
               <div className="flex justify-center relative">
@@ -156,7 +156,7 @@ const Hero = () => (
                     </div>
                     <div>
                       <p className="text-white text-base font-black">輿情口碑系統 2 個月</p>
-                      <p className="text-blue-100 text-xs font-bold">Asgard AI 驅動，精準掌握市場聲量</p>
+                      <p className="text-blue-100 text-xs font-black">Asgard AI 驅動，精準掌握市場聲量</p>
                     </div>
                   </div>
 
@@ -165,8 +165,8 @@ const Hero = () => (
                       <CheckCircle2 className="w-4 h-4 text-white" />
                     </div>
                     <div>
-                      <p className="text-white text-base font-black">專業顧問訪談乙次</p>
-                      <p className="text-blue-100 text-xs font-bold">資深顧問進駐，深度診斷痛點</p>
+                      <p className="text-white text-base font-black">資深零售顧問 一對一陪跑</p>
+                      <p className="text-blue-100 text-xs font-black">資深零售顧問進駐，深度診斷痛點</p>
                     </div>
                   </div>
 
@@ -176,9 +176,9 @@ const Hero = () => (
                         <Sparkles className="w-4 h-4 text-emerald-300" />
                       </div>
                       <div>
-                        <p className="text-white text-base font-black">深度工作坊 (三選一)</p>
-                        <p className="text-emerald-200 text-xs font-bold mt-1 leading-relaxed">
-                          消費者訪談 / AI 基礎課 / 會員經營工作坊<br />
+                        <p className="text-white text-base font-black">4小時 深度工作坊 (三選一)</p>
+                        <p className="text-emerald-200 text-xs font-black mt-1 leading-relaxed">
+                          消費者訪談 / AI 基礎課 / 會員經營 4小時工作坊<br />
                           (每場 4 小時)
                         </p>
                       </div>
@@ -234,7 +234,7 @@ const ProjectBackground = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-3 gap-16 items-start mb-32">
           <div className="lg:col-span-1">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-black uppercase tracking-wider mb-6">
               <Info className="w-4 h-4" />
               計畫背景
             </div>
@@ -242,7 +242,7 @@ const ProjectBackground = () => {
               因應全球趨勢 <br />
               帶動產業 <span className="text-blue-700">全面升級</span>
             </h2>
-            <p className="text-lg text-slate-600 leading-relaxed font-medium">
+            <p className="text-lg text-slate-600 leading-relaxed font-black">
               面對全球數位化與淨零轉型的雙重挑戰，本計畫旨在透過政府資源，協助企業跨越轉型門檻，建立永續競爭力。
             </p>
           </div>
@@ -255,7 +255,7 @@ const ProjectBackground = () => {
                   <TrendingUp className="w-8 h-8" />
                 </div>
                 <h3 className="text-2xl font-black text-slate-900 mb-4">數位轉型領航</h3>
-                <p className="text-slate-500 text-base leading-relaxed font-medium">
+                <p className="text-slate-500 text-base leading-relaxed font-black">
                   協助企業導入 AI 技術、大數據分析與自動化設備，優化生產流程，提升營運效率與產品附加價值。
                 </p>
               </div>
@@ -268,7 +268,7 @@ const ProjectBackground = () => {
                   <Leaf className="w-8 h-8" />
                 </div>
                 <h3 className="text-2xl font-black text-slate-900 mb-4">淨零排放路徑</h3>
-                <p className="text-slate-500 text-base leading-relaxed font-medium">
+                <p className="text-slate-500 text-base leading-relaxed font-black">
                   對應國際減碳要求，提供 ESCO 節能診斷、低碳技術導入與碳盤查輔導，助企業達成綠色轉型目標。
                 </p>
               </div>
@@ -279,10 +279,10 @@ const ProjectBackground = () => {
         <div className="pt-32 border-t border-slate-200 relative">
           <div className="text-center mb-20">
             <h3 className="text-4xl font-black text-slate-900 mb-6 tracking-tight">您的企業在轉型路上是否面臨以下挑戰？</h3>
-            <p className="text-lg text-slate-500 font-medium max-w-2xl mx-auto">我們深入產業第一線，了解企業在變革中所遭遇的真實困境。</p>
+            <p className="text-lg text-slate-500 font-black max-w-2xl mx-auto">我們深入產業第一線，了解企業在變革中所遭遇的真實困境。</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
             {challenges.map((item, idx) => (
               <motion.div
                 key={idx}
@@ -292,15 +292,15 @@ const ProjectBackground = () => {
                 transition={{ delay: idx * 0.1, duration: 0.6 }}
                 className="group relative"
               >
-                <div className="absolute inset-0 bg-white rounded-[3rem] shadow-sm border border-slate-100 group-hover:shadow-3xl group-hover:-translate-y-3 transition-all duration-500"></div>
-                <div className="relative p-10 flex flex-col items-center text-center">
-                  <div className={`w-24 h-24 rounded-[2.5rem] flex items-center justify-center mb-10 border-2 ${item.color} group-hover:rotate-12 transition-transform duration-500 shadow-sm`}>
+                <div className="absolute inset-0 bg-white rounded-[2rem] sm:rounded-[3rem] shadow-sm border border-slate-100 group-hover:shadow-3xl group-hover:-translate-y-3 transition-all duration-500"></div>
+                <div className="relative p-6 sm:p-10 flex flex-col items-center text-center">
+                  <div className={`w-16 h-16 sm:w-24 sm:h-24 rounded-2xl sm:rounded-[2.5rem] flex items-center justify-center mb-6 sm:mb-10 border-2 ${item.color} group-hover:rotate-12 transition-transform duration-500 shadow-sm`}>
                     {item.icon}
                   </div>
-                  <h4 className="text-2xl font-black text-slate-900 mb-5 tracking-tight">{item.title}</h4>
-                  <p className="text-slate-500 text-base leading-relaxed font-medium">{item.desc}</p>
+                  <h4 className="text-xl sm:text-2xl font-black text-slate-900 mb-3 sm:mb-5 tracking-tight">{item.title}</h4>
+                  <p className="text-slate-500 text-sm sm:text-base leading-relaxed font-black">{item.desc}</p>
                   
-                  <div className="mt-10 w-10 h-1.5 bg-slate-100 rounded-full group-hover:w-20 group-hover:bg-blue-500 transition-all duration-500"></div>
+                  <div className="mt-6 sm:mt-10 w-10 h-1.5 bg-slate-100 rounded-full group-hover:w-20 group-hover:bg-blue-500 transition-all duration-500"></div>
                 </div>
               </motion.div>
             ))}
@@ -343,8 +343,8 @@ const WhyChooseUs = () => {
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: "專業顧問實地訪談",
-      desc: "資深顧問團隊親自進駐廠區，進行深度實地檢測與產業現況調查。我們深入一線了解真實痛點，拒絕僅靠網路資料或遠端會議的紙上談兵。",
+      title: "資深零售顧問 一對一陪跑",
+      desc: "資深零售顧問團隊親自進駐廠區，進行深度實地檢測與產業現況調查。我們深入一線了解真實痛點，拒絕僅靠網路資料或遠端會議的紙上談兵。",
       tag: "實戰導向",
       isFeature: true
     }
@@ -355,7 +355,7 @@ const WhyChooseUs = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <h2 className="text-4xl font-black text-slate-900 mb-4 tracking-tight">為什麼選擇六赫茲？</h2>
-          <p className="text-lg text-slate-500 max-w-2xl mx-auto">我們不僅是顧問，更是您企業轉型路上的戰略夥伴。</p>
+          <p className="text-lg text-slate-500 max-w-2xl mx-auto font-black">我們不僅是顧問，更是您企業轉型路上的戰略夥伴。</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
@@ -376,7 +376,7 @@ const WhyChooseUs = () => {
                 {r.icon}
               </div>
               <h3 className="text-xl font-black text-slate-900 mb-3">{r.title}</h3>
-              <p className="text-slate-500 leading-relaxed text-sm font-medium">{r.desc}</p>
+              <p className="text-slate-500 leading-relaxed text-sm font-black">{r.desc}</p>
             </motion.div>
           ))}
 
@@ -398,7 +398,7 @@ const WhyChooseUs = () => {
                 {r.icon}
               </div>
               <h3 className="text-3xl font-black mb-6 tracking-tight">{r.title}</h3>
-              <p className="text-slate-300 leading-relaxed text-base font-medium">{r.desc}</p>
+              <p className="text-slate-300 leading-relaxed text-base font-black">{r.desc}</p>
               
               <a 
                 href="#apply"
@@ -418,22 +418,40 @@ const WhyChooseUs = () => {
 const SuccessStories = () => {
   const stories = [
     {
-      company: "某知名電子零組件廠",
-      result: "生產效率提升 35%",
-      desc: "導入 AI 視覺檢測系統，取代人工目檢，大幅降低不良率並節省人力成本。",
-      tag: "數位轉型"
+      company: "某指標性購物中心",
+      result: "全能整合型 App",
+      desc: "整合停車、票券、點數與支付系統，打造一站式頂級會員數位體驗，提升營運效率與顧客滿意度。",
+      tag: "零售轉型"
     },
     {
-      company: "中部金屬加工大廠",
-      result: "碳排量降低 20%",
-      desc: "透過 ESCO 節能診斷與設備汰換，優化能源管理系統，達成年度減碳目標。",
-      tag: "淨零轉型"
+      company: "某上市電子零組件大廠",
+      result: "AI Agent 製造業應用",
+      desc: "導入 AI 代理人實現自動化批號追蹤與物料生產履歷，精準控管生產品質，將 AI 轉化為企業營運的實質「肌肉」。",
+      tag: "智慧製造"
     },
     {
-      company: "連鎖餐飲服務集團",
-      result: "營收成長 15%",
-      desc: "建立大數據預測模型，精準掌握客流與食材備料，減少浪費並提升客單價。",
+      company: "某連鎖影城集團",
+      result: "AI 智能導購助理",
+      desc: "透過 AI 驅動的導購助理，協助消費者快速查找品牌與優惠資訊，優化商場互動體驗並帶動潛在消費。",
       tag: "AI 應用"
+    },
+    {
+      company: "某大型航空公司",
+      result: "網站與 App 全面改版",
+      desc: "優化訂票與報到流程，提升數位服務體驗，達成品牌形象與技術實力的雙重升級。",
+      tag: "航空數位"
+    },
+    {
+      company: "某指標性商業銀行",
+      result: "數據應用平台開發",
+      desc: "整合多元金融數據，實現精準客群分析與信貸申辦自動化，顯著提升業務開發效率。",
+      tag: "金融科技"
+    },
+    {
+      company: "某全球面板領導大廠",
+      result: "面板控制 App 開發",
+      desc: "透過 A.R.T. 技術實現遠端面板精準控制與內容管理，優化工業與商業顯示應用場景。",
+      tag: "科技製造"
     }
   ];
 
@@ -449,16 +467,16 @@ const SuccessStories = () => {
               Success Stories
             </div>
             <h2 className="text-3xl sm:text-5xl font-black mb-6 tracking-tight">實戰成效見證</h2>
-            <p className="text-lg sm:text-xl text-slate-400">歷年來本補助案已協助超過百家企業完成轉型升級，創造實質商業價值。</p>
+            <p className="text-lg sm:text-xl text-slate-400 font-black">歷年來本補助案已協助超過百家企業完成轉型升級，創造實質商業價值。</p>
           </div>
           <div className="grid grid-cols-2 sm:flex gap-4 w-full sm:w-auto">
             <div className="text-center px-4 sm:px-8 py-4 bg-white/5 rounded-3xl border border-white/10 backdrop-blur-sm">
               <div className="text-2xl sm:text-3xl font-black text-blue-400">100+</div>
-              <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-1">輔導企業</div>
+              <div className="text-[10px] font-black text-slate-500 uppercase tracking-widest mt-1">輔導企業</div>
             </div>
             <div className="text-center px-4 sm:px-8 py-4 bg-white/5 rounded-3xl border border-white/10 backdrop-blur-sm">
-              <div className="text-2xl sm:text-3xl font-black text-emerald-400">2.5億</div>
-              <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-1">累計補助金額</div>
+              <div className="text-2xl sm:text-3xl font-black text-emerald-400">百億+</div>
+              <div className="text-[10px] font-black text-slate-500 uppercase tracking-widest mt-1">累計補助金額</div>
             </div>
           </div>
         </div>
@@ -474,9 +492,9 @@ const SuccessStories = () => {
               className="bg-white/5 p-10 rounded-[3rem] border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all group"
             >
               <div className="text-blue-400 text-xs font-black uppercase tracking-widest mb-4">{s.tag}</div>
-              <h3 className="text-xl font-bold mb-2">{s.company}</h3>
+              <h3 className="text-xl font-black mb-2">{s.company}</h3>
               <div className="text-2xl font-black text-emerald-400 mb-6">{s.result}</div>
-              <p className="text-slate-400 text-sm leading-relaxed">{s.desc}</p>
+              <p className="text-slate-400 text-sm leading-relaxed font-black">{s.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -487,7 +505,7 @@ const SuccessStories = () => {
 
 const Measures = () => {
   const measures = [
-    { icon: <Cpu className="w-6 h-6" />, title: 'AI 數位轉型', desc: '對接 Asgard AI 輿情系統與資深顧問訪談，精準診斷企業痛點，啟動轉型藍圖。' },
+    { icon: <Cpu className="w-6 h-6" />, title: 'AI 數位轉型', desc: '對接 Asgard AI 輿情系統與資深零售顧問一對一陪跑，精準診斷企業痛點，啟動轉型藍圖。' },
     { icon: <GraduationCap className="w-6 h-6" />, title: 'AI 人才培育', desc: '提供從決策層到執行層的 AI 職能培訓，建立企業內部技術力。' },
     { icon: <TrendingUp className="w-6 h-6" />, title: '金融支持', desc: '協助對接優惠融資專案，優化財務結構，確保轉型資金無虞。' },
     { icon: <Globe className="w-6 h-6" />, title: '市場拓展', desc: '利用大數據分析國際趨勢，協助企業精準定位，開拓海外商機。' },
@@ -505,7 +523,7 @@ const Measures = () => {
               Core Measures
             </div>
             <h2 className="text-3xl sm:text-5xl font-black text-slate-900 mb-6 tracking-tight">全方位戰略支援</h2>
-            <p className="text-xl text-slate-500">我們提供七大核心扶持措施，確保企業在轉型路徑上的每一步都穩健有力。</p>
+            <p className="text-xl text-slate-500 font-black">我們提供七大核心扶持措施，確保企業在轉型路徑上的每一步都穩健有力。</p>
           </div>
           <div className="hidden md:block">
             <div className="px-6 py-3 bg-slate-900 text-white rounded-2xl text-sm font-black tracking-widest uppercase shadow-xl">
@@ -527,7 +545,7 @@ const Measures = () => {
                 {m.icon}
               </div>
               <h4 className="text-lg font-black text-slate-900 mb-4 group-hover:text-blue-700 transition-colors">{m.title}</h4>
-              <p className="text-sm text-slate-500 leading-relaxed font-medium">{m.desc}</p>
+              <p className="text-sm text-slate-500 leading-relaxed font-black">{m.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -548,13 +566,13 @@ const Talent = () => (
             Talent Development
           </div>
           <h2 className="text-4xl sm:text-6xl font-black mb-6 sm:mb-8 leading-tight tracking-tighter">AI 人才培育 <br /><span className="text-blue-400">核心競爭力</span></h2>
-          <p className="text-lg sm:text-xl text-slate-300 mb-8 sm:mb-12 leading-relaxed font-medium">
+          <p className="text-lg sm:text-xl text-slate-300 mb-8 sm:mb-12 leading-relaxed font-black">
             強化產業勞工數位轉型知識，建立企業 AI 核心競爭力。
             每家企業最高可獲得 <span className="text-blue-400 font-black underline underline-offset-8">12 萬元</span> 學費全額補助。
           </p>
           <div className="space-y-6 sm:space-y-8">
             {[
-              { title: '戰略決策層', desc: 'CEO 專班、AI 轉型策略工作坊、數位領導力培訓。', icon: <Target className="w-5 h-5" /> },
+              { title: '戰略決策層', desc: 'CEO 專班、AI 轉型策略 4小時工作坊、數位領導力培訓。', icon: <Target className="w-5 h-5" /> },
               { title: '技術執行層', desc: 'iPAS 實務班、AI 職能提升班、自動化設備操作。', icon: <Wrench className="w-5 h-5" /> },
               { title: '基礎保障層', desc: '減班休息勞工參訓津貼、基礎數位工具應用培訓。', icon: <ShieldCheck className="w-5 h-5" /> }
             ].map((item, idx) => (
@@ -564,7 +582,7 @@ const Talent = () => (
                 </div>
                 <div>
                   <h4 className="text-base sm:text-lg font-black text-white mb-1 sm:mb-2 tracking-wide">{item.title}</h4>
-                  <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">{item.desc}</p>
+                  <p className="text-xs sm:text-sm text-slate-400 leading-relaxed font-black">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -599,7 +617,7 @@ const Support = () => (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-20">
         <h2 className="text-4xl font-black text-slate-900 mb-4 tracking-tight">加值支援服務</h2>
-        <p className="text-lg text-slate-500">除了核心輔導，我們更提供多維度的資源對接</p>
+        <p className="text-lg text-slate-500 font-black">除了核心輔導，我們更提供多維度的資源對接</p>
       </div>
       <div className="grid md:grid-cols-3 gap-10">
         {[
@@ -611,8 +629,8 @@ const Support = () => (
             <div className="w-14 h-14 bg-blue-50 text-blue-700 rounded-2xl flex items-center justify-center mb-8">
               {s.icon}
             </div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-4">{s.title}</h3>
-            <p className="text-slate-500 leading-relaxed">{s.desc}</p>
+            <h3 className="text-2xl font-black text-slate-900 mb-4">{s.title}</h3>
+            <p className="text-slate-500 leading-relaxed font-black">{s.desc}</p>
           </div>
         ))}
       </div>
@@ -623,7 +641,7 @@ const Support = () => (
 const Process = () => {
   const steps = [
     { title: '線上申請', desc: '填寫企業基本需求，完成初步意願登記。', icon: <Rocket className="w-5 h-5" /> },
-    { title: '資格審核', desc: '由專人確認申請資格，並指派合適顧問團隊。', icon: <ShieldCheck className="w-5 h-5" /> },
+    { title: '資格審核', desc: '由專人確認申請資格，並指派合適資深顧問團隊。', icon: <ShieldCheck className="w-5 h-5" /> },
     { title: '實地診斷', desc: '專家團隊進駐廠區，進行深度訪談與路徑規劃。', icon: <Target className="w-5 h-5" /> },
     { title: '成效追蹤', desc: '產出結案報告，並持續對接後續政府補助資源。', icon: <TrendingUp className="w-5 h-5" /> }
   ];
@@ -635,7 +653,7 @@ const Process = () => {
           Standardized Workflow
         </div>
         <h2 className="text-5xl font-black text-slate-900 mb-6 tracking-tight">標準化輔導流程</h2>
-        <p className="text-xl text-slate-500 max-w-2xl mx-auto">專業、透明、高效的轉型路徑，確保每一個環節都精準到位。</p>
+        <p className="text-xl text-slate-500 max-w-2xl mx-auto font-black">專業、透明、高效的轉型路徑，確保每一個環節都精準到位。</p>
       </div>
       <div className="grid md:grid-cols-4 gap-12 relative">
         <div className="hidden md:block absolute top-16 left-0 right-0 h-1 bg-slate-100 -z-10"></div>
@@ -658,7 +676,7 @@ const Process = () => {
               <span className="text-xs font-black text-slate-400 group-hover:text-white/50 transition-colors uppercase tracking-widest">Step</span>
             </div>
             <h3 className="text-2xl font-black text-slate-900 mb-4">{step.title}</h3>
-            <p className="text-sm text-slate-500 leading-relaxed font-medium px-4">{step.desc}</p>
+            <p className="text-sm text-slate-500 leading-relaxed font-black px-4">{step.desc}</p>
           </motion.div>
         ))}
       </div>
@@ -669,7 +687,7 @@ const Process = () => {
 const TrustSignals = () => (
   <section className="py-12 bg-slate-50 border-y border-slate-100 overflow-hidden">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <p className="text-center text-[10px] font-bold text-slate-400 uppercase tracking-[0.3em] mb-8">
+      <p className="text-center text-[10px] font-black text-slate-400 uppercase tracking-[0.3em] mb-8">
         合作夥伴與技術對接單位
       </p>
       <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
@@ -707,7 +725,7 @@ const ApplicationForm = () => {
       
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-[10px] font-bold uppercase tracking-widest mb-6 border border-blue-500/30">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-[10px] font-black uppercase tracking-widest mb-6 border border-blue-500/30">
             Business Diagnostic
           </div>
           <div className="flex items-center justify-center gap-2 text-blue-400 mb-6">
@@ -715,22 +733,22 @@ const ApplicationForm = () => {
             <span className="text-sm font-black tracking-widest uppercase">只需 1 萬，啟動 AI 升級</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-black text-white mb-6 tracking-tight">啟動您的轉型藍圖</h2>
-          <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-12">
+          <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-12 font-black">
             點擊下方按鈕前往 Google 表單填寫初步診斷需求。
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 text-left">
             {[
               { title: "輿情口碑系統", desc: "Asgard AI 驅動 2 個月", icon: <Zap className="w-5 h-5 text-blue-400" /> },
-              { title: "專業顧問訪談", desc: "資深顧問深度診斷乙次", icon: <Target className="w-5 h-5 text-indigo-400" /> },
-              { title: "深度工作坊", desc: "三選一專業課程 4 小時", icon: <GraduationCap className="w-5 h-5 text-emerald-400" /> }
+              { title: "資深零售顧問 一對一陪跑", desc: "資深零售顧問深度診斷乙次", icon: <Target className="w-5 h-5 text-indigo-400" /> },
+              { title: "4小時 深度工作坊", desc: "三選一專業課程 4 小時", icon: <GraduationCap className="w-5 h-5 text-emerald-400" /> }
             ].map((item, idx) => (
               <div key={idx} className="bg-white/5 p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-white/10 backdrop-blur-sm">
                 <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center mb-4">
                   {item.icon}
                 </div>
                 <h4 className="text-white font-black mb-2">{item.title}</h4>
-                <p className="text-slate-400 text-sm font-medium">{item.desc}</p>
+                <p className="text-slate-400 text-sm font-black">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -747,7 +765,7 @@ const ApplicationForm = () => {
             <ArrowRight className="w-6 h-6 sm:w-8 sm:h-8 group-hover:translate-x-2 transition-transform" />
           </motion.a>
           
-          <p className="mt-8 text-slate-500 text-sm font-medium">
+          <p className="mt-8 text-slate-500 text-sm font-light">
             * 點擊後將開啟新分頁前往官方 Google 表單
           </p>
         </div>
@@ -759,7 +777,7 @@ const ApplicationForm = () => {
 const FAQ = () => {
   const faqs = [
     { q: "企業申請本計畫需要具備什麼資格？", a: "凡在台灣合法登記之企業，且無重大違規紀錄者皆可申請。我們將根據企業規模與產業別，媒合最合適的補助專案。" },
-    { q: "「1 萬換 20 萬」的方案包含哪些具體服務？", a: "包含 Asgard AI 輿情口碑系統 2 個月使用權、資深顧問實地訪視診斷乙次，以及可從「消費者訪談」、「AI 基礎課」、「會員經營」中三選一的 4 小時深度工作坊。" },
+    { q: "「1 萬換 20 萬」的方案包含哪些具體服務？", a: "包含 Asgard AI 輿情口碑系統 2 個月使用權、資深零售顧問一對一陪跑，以及可從「消費者訪談」、「AI 基礎課」、「會員經營」中三選一的 4小時 深度工作坊。" },
     { q: "計畫執行週期通常需要多久？", a: "初步診斷通常在 2-4 週內完成。後續的深度輔導與技術導入則視企業需求而定，通常為 3-6 個月。" },
     { q: "除了 AI 轉型，淨零排放相關的補助也可以申請嗎？", a: "是的，本計畫採「雙軸轉型」策略，數位與淨零資源可同步對接，協助企業達成 ESG 永續目標。" }
   ];
@@ -774,7 +792,7 @@ const FAQ = () => {
             Common Questions
           </div>
           <h2 className="text-3xl sm:text-5xl font-black text-slate-900 mb-6 tracking-tight">常見問題解答</h2>
-          <p className="text-lg sm:text-xl text-slate-500">解決您的疑慮，加速轉型決策過程。</p>
+          <p className="text-lg sm:text-xl text-slate-500 font-black">解決您的疑慮，加速轉型決策過程。</p>
         </div>
         <div className="space-y-4">
           {faqs.map((faq, idx) => (
@@ -796,7 +814,7 @@ const FAQ = () => {
                     exit={{ height: 0, opacity: 0 }}
                     className="overflow-hidden"
                   >
-                    <div className="px-8 pb-8 text-slate-500 text-sm leading-relaxed font-medium">
+                    <div className="px-8 pb-8 text-slate-500 text-sm leading-relaxed font-black">
                       {faq.a}
                     </div>
                   </motion.div>
@@ -816,17 +834,17 @@ const Footer = () => (
       <div className="grid md:grid-cols-4 gap-16 mb-20">
         <div className="md:col-span-2">
           <div className="flex flex-col mb-8">
-            <span className="text-sm font-black text-blue-700 uppercase tracking-[0.3em] mb-1">推動產業升級</span>
-            <span className="text-sm font-black text-blue-700 uppercase tracking-[0.3em]">強化企業競爭力</span>
+            <span className="text-sm font-light text-blue-700 uppercase tracking-[0.3em] mb-1">推動產業升級</span>
+            <span className="text-sm font-light text-blue-700 uppercase tracking-[0.3em]">強化企業競爭力</span>
           </div>
-          <p className="text-slate-500 text-lg leading-relaxed max-w-md font-medium">
+          <p className="text-slate-500 text-lg leading-relaxed max-w-md font-light">
             六赫茲 (The Hex) 致力於成為企業轉型路上的最強後盾，對接政府資源，共創產業新價值。我們以專業診斷為起點，陪伴企業邁向 AI 與淨零的永續未來。
           </p>
         </div>
         
         <div>
           <h4 className="font-black text-slate-900 uppercase tracking-[0.2em] text-xs mb-8">計畫專區</h4>
-          <ul className="space-y-4 text-sm text-slate-500 font-bold">
+          <ul className="space-y-4 text-sm text-slate-500 font-light">
             <li><button onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})} className="hover:text-blue-700 transition-colors">計畫簡介</button></li>
             <li><button onClick={() => document.getElementById('overview')?.scrollIntoView({behavior: 'smooth'})} className="hover:text-blue-700 transition-colors">策略總覽</button></li>
             <li><button onClick={() => document.getElementById('talent')?.scrollIntoView({behavior: 'smooth'})} className="hover:text-blue-700 transition-colors">人才培育</button></li>
@@ -837,11 +855,11 @@ const Footer = () => (
       
       <div className="pt-12 border-t border-slate-50 flex flex-col md:flex-row justify-between items-center gap-8">
         <div className="flex items-center gap-6">
-          <p className="text-slate-400 text-[10px] font-black uppercase tracking-[0.3em]">
+          <p className="text-slate-400 text-[10px] font-light uppercase tracking-[0.3em]">
             © 2026 六赫茲 (The Hex) 產業競爭力輔導團. All rights reserved.
           </p>
         </div>
-        <div className="flex gap-8 text-[10px] font-black text-slate-300 uppercase tracking-[0.3em]">
+        <div className="flex gap-8 text-[10px] font-light text-slate-300 uppercase tracking-[0.3em]">
           <button className="hover:text-blue-700 transition-colors">隱私權政策</button>
           <button className="hover:text-blue-700 transition-colors">服務條款</button>
           <button className="hover:text-blue-700 transition-colors">資訊安全</button>
