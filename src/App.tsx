@@ -172,6 +172,16 @@ const Hero = () => (
                     </div>
                   </div>
 
+                  <div className="flex items-start gap-4">
+                    <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center shrink-0 mt-0.5">
+                      <CheckCircle2 className="w-4 h-4 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-white text-base font-black">MCP 智慧串接方案（即刻啟動 AI 營運力）</p>
+                      <p className="text-blue-100 text-xs font-black">會員 / POS / ERP 快速對接，免建資料庫，自然語言即問即查，營運數據即時掌握</p>
+                    </div>
+                  </div>
+
                   <div className="pt-4 border-t border-white/10">
                     <div className="flex items-start gap-4">
                       <div className="w-6 h-6 rounded-full bg-emerald-400/30 flex items-center justify-center shrink-0 mt-0.5">
